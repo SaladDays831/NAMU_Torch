@@ -1,0 +1,41 @@
+PODS:
+  - OnboardKit (1.5.0)
+  - QuickLayout (3.0.0)
+  - SDWebImage (5.2.2):
+    - SDWebImage/Core (= 5.2.2)
+  - SDWebImage/Core (5.2.2)
+  - SwiftEntryKit (1.1.3):
+    - QuickLayout (= 3.0.0)
+  - TorchKit (0.3.1)
+
+DEPENDENCIES:
+  - OnboardKit
+  - SDWebImage
+  - SwiftEntryKit (= 1.1.3)
+  - "TorchKit (from `{:http=>\"https://artifacts.torch.dev/torchkit/TorchKit_0_3_1.zip\"}`)"
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - OnboardKit
+    - QuickLayout
+    - SDWebImage
+    - SwiftEntryKit
+
+EXTERNAL SOURCES:
+  TorchKit:
+    :http: https://artifacts.torch.dev/torchkit/TorchKit_0_3_1.zip
+
+CHECKOUT OPTIONS:
+  TorchKit:
+    :http: https://artifacts.torch.dev/torchkit/TorchKit_0_3_1.zip
+
+SPEC CHECKSUMS:
+  OnboardKit: 73a4e9c9a1ae88afee0514ac3f2bc4f82126b66e
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  SDWebImage: 5fcdb02cc35e05fc35791ec514b191d27189f872
+  SwiftEntryKit: be00509cf6e1e88b57bb96cf2114b09cf20ee84a
+  TorchKit: 1b1165ba9a5d8c919191d429a114457dc20a83f4
+
+PODFILE CHECKSUM: 287d443f348d8c4bd729754bbd933e87790430df
+
+COCOAPODS: 1.8.3

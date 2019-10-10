@@ -1,0 +1,18 @@
+{
+  "name": "TorchKit",
+  "version": "0.3.1",
+  "summary": "Add Torch projects to your iOS App",
+  "homepage": "https://torch.app",
+  "license": "proprietary",
+  "authors": "Torch 3D, Inc",
+  "platforms": {
+    "ios": "12.2"
+  },
+  "swift_versions": "5.1",
+  "source": {
+    "http": "https://artifacts.torch.dev/torchkit/TorchKit_0_3_1.zip"
+  },
+  "vendored_frameworks": "TorchKit.framework",
+  "requires_arc": true,
+  "swift_version": "5.1"
+}
