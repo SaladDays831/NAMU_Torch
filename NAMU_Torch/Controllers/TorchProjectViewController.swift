@@ -117,80 +117,80 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         switch trigger.name {
             
         case "heorhi1tapped":
-            self.popUpDescription.text = artObjects[0].trigger1Description
+            self.popUpDescription.text = artObjects[0].trigger1description
             self.presentPopUp(fromBottom: true)
         case "heorhi2tapped":
-            self.popUpDescription.text = artObjects[0].trigger2Description
+            self.popUpDescription.text = artObjects[0].trigger2description
             self.presentPopUp(fromBottom: true)
         case "heorhi3tapped":
-            self.popUpDescription.text = artObjects[0].trigger3Description
+            self.popUpDescription.text = artObjects[0].trigger3description
             self.presentPopUp(fromBottom: true)
         case "heorhi4tapped":
-            self.popUpDescription.text = artObjects[0].trigger4Description
+            self.popUpDescription.text = artObjects[0].trigger4description
             self.presentPopUp(fromBottom: true)
         case "heorhiNextTapped":
-            self.popUpDescription.text = artObjects[0].nextConnection
+            self.popUpDescription.text = artObjects[0].nextconnection
             self.presentPopUp(fromBottom: false)
             
         case "horse1tapped":
-            self.popUpDescription.text = artObjects[1].trigger1Description
+            self.popUpDescription.text = artObjects[1].trigger1description
             self.presentPopUp(fromBottom: true)
         case "horse2tapped":
-            self.popUpDescription.text = artObjects[1].trigger2Description
+            self.popUpDescription.text = artObjects[1].trigger2description
             self.presentPopUp(fromBottom: true)
         case "horse3tapped":
-            self.popUpDescription.text = artObjects[1].trigger3Description
+            self.popUpDescription.text = artObjects[1].trigger3description
             self.presentPopUp(fromBottom: true)
         case "horse4tapped":
-            self.popUpDescription.text = artObjects[1].trigger4Description
+            self.popUpDescription.text = artObjects[1].trigger4description
             self.presentPopUp(fromBottom: true)
         case "horse5tapped":
-            self.popUpDescription.text = artObjects[1].trigger5Description
+            self.popUpDescription.text = artObjects[1].trigger5description
             self.presentPopUp(fromBottom: true)
         case "horseNextTapped":
-            self.popUpDescription.text = artObjects[1].nextConnection
+            self.popUpDescription.text = artObjects[1].nextconnection
             self.presentPopUp(fromBottom: false)
             
         case "velyk1tapped":
-            self.popUpDescription.text = artObjects[2].trigger1Description
+            self.popUpDescription.text = artObjects[2].trigger1description
             self.presentPopUp(fromBottom: true)
         case "velyk2tapped":
-            self.popUpDescription.text = artObjects[2].trigger2Description
+            self.popUpDescription.text = artObjects[2].trigger2description
             self.presentPopUp(fromBottom: true)
         case "velyk3tapped":
-            self.popUpDescription.text = artObjects[2].trigger3Description
+            self.popUpDescription.text = artObjects[2].trigger3description
             self.presentPopUp(fromBottom: true)
         case "velykNextTapped":
-            self.popUpDescription.text = artObjects[2].nextConnection
+            self.popUpDescription.text = artObjects[2].nextconnection
             self.presentPopUp(fromBottom: false)
             
         case "ded1tapped":
-            self.popUpDescription.text = artObjects[3].trigger1Description
+            self.popUpDescription.text = artObjects[3].trigger1description
             self.presentPopUp(fromBottom: true)
         case "ded2tapped":
-            self.popUpDescription.text = artObjects[3].trigger2Description
+            self.popUpDescription.text = artObjects[3].trigger2description
             self.presentPopUp(fromBottom: true)
         case "ded3tapped":
-            self.popUpDescription.text = artObjects[3].trigger3Description
+            self.popUpDescription.text = artObjects[3].trigger3description
             self.presentPopUp(fromBottom: true)
         case "dedNexttapped":
-            self.popUpDescription.text = artObjects[3].nextConnection
+            self.popUpDescription.text = artObjects[3].nextconnection
             self.presentPopUp(fromBottom: false)
             
         case "mamay1tapped":
-            self.popUpDescription.text = artObjects[4].trigger1Description
+            self.popUpDescription.text = artObjects[4].trigger1description
             self.presentPopUp(fromBottom: true)
         case "mamay2tapped":
-            self.popUpDescription.text = artObjects[4].trigger2Description
+            self.popUpDescription.text = artObjects[4].trigger2description
             self.presentPopUp(fromBottom: true)
         case "mamay3tapped":
-            self.popUpDescription.text = artObjects[4].trigger3Description
+            self.popUpDescription.text = artObjects[4].trigger3description
             self.presentPopUp(fromBottom: true)
         case "mamay4tapped":
-            self.popUpDescription.text = artObjects[4].trigger4Description
+            self.popUpDescription.text = artObjects[4].trigger4description
             self.presentPopUp(fromBottom: true)
         case "mamayNextTapped":
-            self.popUpDescription.text = artObjects[4].nextConnection
+            self.popUpDescription.text = artObjects[4].nextconnection
             self.presentPopUp(fromBottom: false)
             
             

@@ -20,7 +20,7 @@ class PopUpContentManager {
     
     func loadData() {
         
-        guard let url = URL(string: "https://script.google.com/macros/s/AKfycbwi_FubE4jHNfe9lGQDB58fyYh-jz1byPn45a5qdLJotqGBbFGn/exec") else {
+        guard let url = URL(string: "http://gsx2json.com/api?id=1f7j3WPBouLWuIhySO2p2bFF13RlR76BxvLSNFUT9Ods&columns=false") else {
             print("RETURNED HERE?????")
             return }
         URLSession.shared.dataTask(with: url) { (data, response
@@ -31,7 +31,10 @@ class PopUpContentManager {
     
                  do {
                      let decoder = JSONDecoder()
-                    artObjects = try decoder.decode([ArtObject].self, from: data)
+                    let rows = try decoder.decode(RootClass.self, from: data)
+                    //artObjects = try decoder.decode([ArtObject].self, from: data)
+                    guard let JSONArt = rows.rows else { return }
+                    artObjects = JSONArt
                     print("artObjects has \(artObjects.count) items")
                     //print("\(artObjects[0].trigger1Description)")
                  } catch let error {
