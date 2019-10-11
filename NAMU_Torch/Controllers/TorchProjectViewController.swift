@@ -17,12 +17,16 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var notificationText: UILabel!
     
+    @IBOutlet weak var guideView: UIView!
+    @IBOutlet weak var guideOKButton: UIButton!
+    
+    
     
     let onboardingVC = OnboardingViewController.shared
     let popUpContentManager = PopUpContentManager.shared
     
  //MARK: Project URL
-  var projectURL = Bundle.main.url(forResource: "NAMUU", withExtension: "torchkitproj")!
+  var projectURL = Bundle.main.url(forResource: "fuck", withExtension: "torchkitproj")!
     var projectIsLoaded = false
     var loadedProject: TorchProjectNode?
 
@@ -326,6 +330,8 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     
     
     
+    @IBAction func guideOKButtonPressed(_ sender: UIButton) {
+    }
     
     
     

@@ -22,10 +22,10 @@
 		833CA00C2326F62A00A5FD51 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CA0092326F62A00A5FD51 /* Plane.swift */; };
 		833CA00D2326F62A00A5FD51 /* TorchProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CA00A2326F62A00A5FD51 /* TorchProjectViewController.swift */; };
 		833CA00F2326F63300A5FD51 /* envmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 833CA00E2326F63300A5FD51 /* envmap.png */; };
-		834F81BA234FDBD4001254CC /* NAMUU.torchkitproj in Resources */ = {isa = PBXBuildFile; fileRef = 834F81B9234FDBD4001254CC /* NAMUU.torchkitproj */; };
 		8368733E233C1C4600EC166C /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368733D233C1C4600EC166C /* OtherViewController.swift */; };
 		83687340233C221700EC166C /* ArtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368733F233C221700EC166C /* ArtsViewController.swift */; };
 		83687342233C242800EC166C /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83687341233C242800EC166C /* CustomCollectionViewCell.swift */; };
+		836E1AD023500B97006FC242 /* fuck.torchkitproj in Resources */ = {isa = PBXBuildFile; fileRef = 836E1ACF23500B97006FC242 /* fuck.torchkitproj */; };
 		83920EEF2348F362006C116D /* NAMU-1960.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83920EEE2348F362006C116D /* NAMU-1960.otf */; };
 		83A4634F234162C20086069E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4634E234162C20086069E /* Extensions.swift */; };
 		83A46351234340960086069E /* PopUpContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A46350234340960086069E /* PopUpContentManager.swift */; };
@@ -48,10 +48,10 @@
 		833CA0092326F62A00A5FD51 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		833CA00A2326F62A00A5FD51 /* TorchProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorchProjectViewController.swift; sourceTree = "<group>"; };
 		833CA00E2326F63300A5FD51 /* envmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envmap.png; sourceTree = "<group>"; };
-		834F81B9234FDBD4001254CC /* NAMUU.torchkitproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = NAMUU.torchkitproj; sourceTree = "<group>"; };
 		8368733D233C1C4600EC166C /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		8368733F233C221700EC166C /* ArtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsViewController.swift; sourceTree = "<group>"; };
 		83687341233C242800EC166C /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		836E1ACF23500B97006FC242 /* fuck.torchkitproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = fuck.torchkitproj; sourceTree = "<group>"; };
 		83920EEE2348F362006C116D /* NAMU-1960.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-1960.otf"; sourceTree = "<group>"; };
 		83A4634E234162C20086069E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		83A46350234340960086069E /* PopUpContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpContentManager.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		833CA01323284EF700A5FD51 /* Torch Projects */ = {
 			isa = PBXGroup;
 			children = (
-				834F81B9234FDBD4001254CC /* NAMUU.torchkitproj */,
+				836E1ACF23500B97006FC242 /* fuck.torchkitproj */,
 			);
 			path = "Torch Projects";
 			sourceTree = "<group>";
@@ -249,8 +249,8 @@
 				833CA0012326ED0500A5FD51 /* LaunchScreen.storyboard in Resources */,
 				833C9FFE2326ED0500A5FD51 /* Assets.xcassets in Resources */,
 				833C9FFC2326ED0400A5FD51 /* Main.storyboard in Resources */,
-				834F81BA234FDBD4001254CC /* NAMUU.torchkitproj in Resources */,
 				83920EEF2348F362006C116D /* NAMU-1960.otf in Resources */,
+				836E1AD023500B97006FC242 /* fuck.torchkitproj in Resources */,
 				83038C282328652200075247 /* UberMove-Light.ttf in Resources */,
 				83038C292328652200075247 /* UberMove-Regular.TTF in Resources */,
 				83038C262328652200075247 /* UberMove-Medium.TTF in Resources */,
