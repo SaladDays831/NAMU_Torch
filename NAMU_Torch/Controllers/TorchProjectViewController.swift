@@ -26,7 +26,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     let popUpContentManager = PopUpContentManager.shared
     
  //MARK: Project URL
-  var projectURL = Bundle.main.url(forResource: "fuck", withExtension: "torchkitproj")!
+  var projectURL = Bundle.main.url(forResource: "NAMU-18", withExtension: "torchkitproj")!
     var projectIsLoaded = false
     var loadedProject: TorchProjectNode?
 
@@ -197,6 +197,65 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
             self.popUpDescription.text = artObjects[4].nextconnection
             self.presentPopUp(fromBottom: false)
             
+        case "babushka1tapped":
+            self.popUpDescription.text = artObjects[5].trigger1description
+            self.presentPopUp(fromBottom: true)
+        case "babushka2tapped":
+            self.popUpDescription.text = artObjects[5].trigger2description
+            self.presentPopUp(fromBottom: true)
+        case "babushkaNextTapped":
+            self.popUpDescription.text = artObjects[5].nextconnection
+            self.presentPopUp(fromBottom: false)
+            
+        case "drunk1tapped":
+            self.popUpDescription.text = artObjects[6].trigger1description
+            self.presentPopUp(fromBottom: true)
+        case "drunk2tapped":
+            self.popUpDescription.text = artObjects[6].trigger2description
+            self.presentPopUp(fromBottom: true)
+        case "drunkNextTapped":
+            self.popUpDescription.text = artObjects[6].nextconnection
+            self.presentPopUp(fromBottom: false)
+            
+        case "monk1tapped":
+            self.popUpDescription.text = artObjects[7].trigger1description
+            self.presentPopUp(fromBottom: true)
+        case "monk2tapped":
+            self.popUpDescription.text = artObjects[7].trigger2description
+            self.presentPopUp(fromBottom: true)
+        case "monkNextTapped":
+            self.popUpDescription.text = artObjects[7].nextconnection
+            self.presentPopUp(fromBottom: false)
+            
+        case "love1tapped":
+            self.popUpDescription.text = artObjects[8].trigger1description
+            self.presentPopUp(fromBottom: true)
+        case "love2tapped":
+            self.popUpDescription.text = artObjects[8].trigger2description
+            self.presentPopUp(fromBottom: true)
+        case "loveNextTapped":
+            self.popUpDescription.text = artObjects[8].nextconnection
+            self.presentPopUp(fromBottom: false)
+            
+        case "forest1tapped":
+            self.popUpDescription.text = artObjects[9].trigger1description
+            self.presentPopUp(fromBottom: true)
+        case "forest2tapped":
+            self.popUpDescription.text = artObjects[9].trigger2description
+            self.presentPopUp(fromBottom: true)
+        case "forestNextTapped":
+            self.popUpDescription.text = artObjects[9].nextconnection
+            self.presentPopUp(fromBottom: false)
+            
+        case "winter1tapped":
+            self.popUpDescription.text = artObjects[10].trigger1description
+            self.presentPopUp(fromBottom: true)
+        case "winter2tapped":
+            self.popUpDescription.text = artObjects[10].trigger2description
+            self.presentPopUp(fromBottom: true)
+        case "winterNextTapped":
+            self.popUpDescription.text = artObjects[10].nextconnection
+            self.presentPopUp(fromBottom: false)
             
         case "triggerChurchNotif":
             self.notificationText.text = "Подивись на ікону попереду!"
@@ -266,13 +325,15 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     worldPlaneMaterial.colorBufferWriteMask = []
     worldPlaneGeometry.materials = [worldPlaneMaterial]
     worldPlaneNode.castsShadow = false
+    //comment next line
     //self.sceneView.scene.rootNode.addChildNode(worldPlaneNode)
     let light = SCNLight()
     light.type = .directional
     light.shadowMode = .deferred
     light.intensity = 1000.0
     light.color = UIColor(white: 1.0, alpha: 1.0)
-    //light.castsShadow = true
+    //comment next line
+    light.castsShadow = true
     light.shadowColor = UIColor.black.withAlphaComponent(0.5)
     light.shadowBias = 32
     light.shadowSampleCount = 4
