@@ -15,23 +15,23 @@ class OnboardingViewController: UIViewController {
         
     lazy var onboardingPages: [OnboardPage] = {
         let pageOne = OnboardPage(title: "",
-                                  imageName: "onboardPH",
+                                  imageName: "onb1",
                                   description: "Вітаємо у НАМУ, музеї левів! Цей AR-додаток допоможе тобі самостійно ознайомитись з експозицією першого поверху.",
                                   advanceButtonTitle: "")
         
         let pageTwo = OnboardPage(title: "",
-                                  imageName: "onboardPH",
+                                  imageName: "onb2",
                                   description: "Але саме леви музею стануть твоїми провідниками. Почни йти за слідами лева, щоб розпочати екскурсію!",
                                   advanceButtonTitle: "")
         
         let pageThree = OnboardPage(title: "",
-                                    imageName: "onboardPH",
+                                    imageName: "onb3",
                                     description: "Наведи камеру на картину та тисни на цифри, щоб відкрити цікаві факти про експонат.",
                                     advanceButtonTitle: ""
                                     )
         
         let pageFour = OnboardPage(title: "",
-                                   imageName: "onboardPH",
+                                   imageName: "onb4",
                                    description: "Щоб продовжити екскурсію натисни «Далі» та знову прямуй за левовим слідом до наступного експонату.",
                                    advanceButtonTitle: ""
                                    )
