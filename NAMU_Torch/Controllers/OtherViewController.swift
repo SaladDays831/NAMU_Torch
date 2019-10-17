@@ -14,14 +14,25 @@ class OtherViewController: UIViewController {
     
     let onboardingVC = OnboardingViewController.shared
     
-    let sectionItems = ["Почати екскурсію з початку", "Показати ґайд", "Картини", "Змінити мову", "3D мапа NAMU", "Як дістатися до NAMU", "Контакти", "Залишити відгук"]
+    let sectionItems = ["Розпочати AR екскурсію з початку", "Як користуватися додатком", "Список картин", "3D модель церкви Вознесіння", "3D мапа музею", "Як дістатися до музею", "Контакти", "Залишити фідбек"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
+        tableView.separatorColor = .black
+        tableView.tableFooterView = UIView()
+        
+        let px = 1 / UIScreen.main.scale
+        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: px)
+        let line = UIView(frame: frame)
+        self.tableView.tableHeaderView = line
+        line.backgroundColor = self.tableView.separatorColor
+        
+        tableView.rowHeight = 80
     }
     
 
@@ -33,14 +44,14 @@ class OtherViewController: UIViewController {
     }
     
     func presentOnboardingRestartAlert() {
-        let alert = UIAlertController(title: "Показати ґайд", message: "Пройти ґайд ще раз?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Як користуватися додатком", message: "Пройти ґайд ще раз?", preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "Так", style: UIAlertAction.Style.default, handler: { action in
             let onbVC = self.onboardingVC.createOnboardingVC()
             onbVC.modalPresentationStyle = .overFullScreen
             onbVC.presentFrom(self, animated: true)
         }))
-        alert.addAction(UIAlertAction(title: "Видмина", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Скасувати", style: UIAlertAction.Style.cancel, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
     }
@@ -58,8 +69,14 @@ extension OtherViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.font = UIFont(name: "NAMU-1960", size: 16.0)
         cell.textLabel?.text = sectionItems[indexPath.row]
         
+        if indexPath.row == 3 || indexPath.row == 4 {
+            cell.isUserInteractionEnabled = false
+            cell.textLabel?.isEnabled = false
+            cell.detailTextLabel?.isEnabled = false
+        }
         
         return cell
     }
@@ -77,7 +94,7 @@ extension OtherViewController: UITableViewDelegate, UITableViewDataSource {
             print("arts")
             performSegue(withIdentifier: "toArts", sender: self)
         case 3:
-            print("lang")
+            print("church 3D")
         case 4:
             print("3d map")
         case 5:

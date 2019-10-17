@@ -5,10 +5,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NAMU-1910alt.otf">
+            <string>NAMU-1910alt</string>
+        </array>
         <array key="NAMU-1960.otf">
             <string>NAMU-1960</string>
         </array>
@@ -161,25 +163,24 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="collectionCell" id="b5C-kq-jHE" customClass="CustomCollectionViewCell" customModule="NAMU_Torch" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="b5C-kq-jHE" customClass="CustomCollectionViewCell" customModule="NAMU_Torch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="176"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="WhO-0X-YId">
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="167" height="176"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EU5-NX-hHZ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EU5-NX-hHZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="176"/>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="EU5-NX-hHZ" secondAttribute="trailing" id="EKV-fc-hHR"/>
-                                                <constraint firstAttribute="bottom" secondItem="EU5-NX-hHZ" secondAttribute="bottom" id="PpL-Y0-ifm"/>
-                                                <constraint firstItem="EU5-NX-hHZ" firstAttribute="top" secondItem="WhO-0X-YId" secondAttribute="top" id="T3F-S6-SAg"/>
-                                                <constraint firstItem="EU5-NX-hHZ" firstAttribute="leading" secondItem="WhO-0X-YId" secondAttribute="leading" id="ojv-nl-p5u"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="167" height="176"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="EU5-NX-hHZ" secondAttribute="trailing" id="EKV-fc-hHR"/>
+                                            <constraint firstAttribute="bottom" secondItem="EU5-NX-hHZ" secondAttribute="bottom" id="PpL-Y0-ifm"/>
+                                            <constraint firstItem="EU5-NX-hHZ" firstAttribute="top" secondItem="b5C-kq-jHE" secondAttribute="top" id="T3F-S6-SAg"/>
+                                            <constraint firstItem="EU5-NX-hHZ" firstAttribute="leading" secondItem="b5C-kq-jHE" secondAttribute="leading" id="ojv-nl-p5u"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="artImageView" destination="EU5-NX-hHZ" id="22l-gv-phR"/>
                                         </connections>
@@ -232,8 +233,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-VY-htA">
-                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="741"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="Wg9-Mn-mOF">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -245,30 +247,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Інше" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-fd-KaI">
-                                <rect key="frame" x="20" y="94" width="69" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfB-gg-PUg">
-                                <rect key="frame" x="10" y="56" width="30" height="30"/>
-                                <state key="normal" image="backIcon"/>
+                                <rect key="frame" x="374" y="68" width="16" height="22"/>
+                                <state key="normal" image="closeIcon"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="Csx-gC-Yzz" eventType="touchUpInside" id="lIf-K8-R7T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ІНШЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-fd-KaI">
+                                <rect key="frame" x="173" y="68" width="68" height="29"/>
+                                <fontDescription key="fontDescription" name="NAMU-1910alt" family="NAMU" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GfB-gg-PUg" firstAttribute="leading" secondItem="EtG-tI-UDS" secondAttribute="leading" constant="10" id="2cP-eT-q11"/>
                             <constraint firstItem="nzq-VY-htA" firstAttribute="bottom" secondItem="EtG-tI-UDS" secondAttribute="bottom" id="61q-zZ-5f3"/>
-                            <constraint firstItem="I8A-fd-KaI" firstAttribute="leading" secondItem="EtG-tI-UDS" secondAttribute="leading" constant="20" id="9bp-uv-6Vw"/>
+                            <constraint firstItem="nzq-VY-htA" firstAttribute="top" secondItem="I8A-fd-KaI" secondAttribute="bottom" constant="24" id="7WL-Ki-xvD"/>
+                            <constraint firstItem="I8A-fd-KaI" firstAttribute="top" secondItem="EtG-tI-UDS" secondAttribute="top" constant="24" id="FD0-NO-sbk"/>
+                            <constraint firstItem="GfB-gg-PUg" firstAttribute="top" secondItem="EtG-tI-UDS" secondAttribute="top" constant="24" id="FM4-88-psK"/>
                             <constraint firstItem="nzq-VY-htA" firstAttribute="leading" secondItem="EtG-tI-UDS" secondAttribute="leading" id="Ft3-NF-KfF"/>
-                            <constraint firstItem="I8A-fd-KaI" firstAttribute="top" secondItem="EtG-tI-UDS" secondAttribute="top" constant="50" id="WmA-Dc-XdR"/>
                             <constraint firstItem="nzq-VY-htA" firstAttribute="trailing" secondItem="EtG-tI-UDS" secondAttribute="trailing" id="Ywc-S0-E1c"/>
-                            <constraint firstItem="GfB-gg-PUg" firstAttribute="top" secondItem="EtG-tI-UDS" secondAttribute="top" constant="12" id="nwr-dV-nJg"/>
-                            <constraint firstItem="nzq-VY-htA" firstAttribute="top" secondItem="I8A-fd-KaI" secondAttribute="bottom" constant="30" id="rZw-0f-Kdb"/>
+                            <constraint firstItem="EtG-tI-UDS" firstAttribute="trailing" secondItem="GfB-gg-PUg" secondAttribute="trailing" constant="24" id="fF1-rK-b8m"/>
+                            <constraint firstItem="I8A-fd-KaI" firstAttribute="centerX" secondItem="eZn-tR-XnV" secondAttribute="centerX" id="yFc-I1-qBG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EtG-tI-UDS"/>
                     </view>
@@ -285,6 +287,7 @@
     </scenes>
     <resources>
         <image name="backIcon" width="30" height="30"/>
+        <image name="closeIcon" width="16" height="16"/>
         <image name="hall" width="2481" height="1916"/>
         <image name="leo" width="205" height="196"/>
         <image name="menuIcon" width="30" height="30"/>

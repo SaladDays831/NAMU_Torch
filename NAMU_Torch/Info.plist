@@ -29,11 +29,8 @@
 	<string>Bitch give access</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>NAMU-1910alt.otf</string>
 		<string>NAMU-1960.otf</string>
-		<string>UberMove-Bold.TTF</string>
-		<string>UberMove-Light.ttf</string>
-		<string>UberMove-Medium.TTF</string>
-		<string>UberMove-Regular.TTF</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		4C875F403BBC03357F39F92E /* Pods_NAMU_Torch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C628CAB4F98D19727A20F7 /* Pods_NAMU_Torch.framework */; };
 		83038C20232855F300075247 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038C1F232855F300075247 /* OnboardingViewController.swift */; };
-		83038C262328652200075247 /* UberMove-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 83038C222328652200075247 /* UberMove-Medium.TTF */; };
-		83038C272328652200075247 /* UberMove-Bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 83038C232328652200075247 /* UberMove-Bold.TTF */; };
-		83038C282328652200075247 /* UberMove-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83038C242328652200075247 /* UberMove-Light.ttf */; };
-		83038C292328652200075247 /* UberMove-Regular.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 83038C252328652200075247 /* UberMove-Regular.TTF */; };
 		8324CA0F23413BC9000B7BDE /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324CA0E23413BC9000B7BDE /* ArtObject.swift */; };
 		833C9FF72326ED0400A5FD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833C9FF62326ED0400A5FD51 /* AppDelegate.swift */; };
 		833C9FFC2326ED0400A5FD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833C9FFA2326ED0400A5FD51 /* Main.storyboard */; };
@@ -28,14 +24,12 @@
 		83920EEF2348F362006C116D /* NAMU-1960.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83920EEE2348F362006C116D /* NAMU-1960.otf */; };
 		83A4634F234162C20086069E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4634E234162C20086069E /* Extensions.swift */; };
 		83A46351234340960086069E /* PopUpContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A46350234340960086069E /* PopUpContentManager.swift */; };
+		83DBEA872359069800CE3180 /* NAMU-1910alt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA862359069800CE3180 /* NAMU-1910alt.otf */; };
+		83DBEA8A2359181400CE3180 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA892359181400CE3180 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		83038C1F232855F300075247 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		83038C222328652200075247 /* UberMove-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UberMove-Medium.TTF"; sourceTree = "<group>"; };
-		83038C232328652200075247 /* UberMove-Bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UberMove-Bold.TTF"; sourceTree = "<group>"; };
-		83038C242328652200075247 /* UberMove-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UberMove-Light.ttf"; sourceTree = "<group>"; };
-		83038C252328652200075247 /* UberMove-Regular.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UberMove-Regular.TTF"; sourceTree = "<group>"; };
 		8324CA0E23413BC9000B7BDE /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
 		833C9FF32326ED0400A5FD51 /* NAMU_Torch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NAMU_Torch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		833C9FF62326ED0400A5FD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +47,8 @@
 		83920EEE2348F362006C116D /* NAMU-1960.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-1960.otf"; sourceTree = "<group>"; };
 		83A4634E234162C20086069E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		83A46350234340960086069E /* PopUpContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpContentManager.swift; sourceTree = "<group>"; };
+		83DBEA862359069800CE3180 /* NAMU-1910alt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-1910alt.otf"; sourceTree = "<group>"; };
+		83DBEA892359181400CE3180 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		91660024B56577C6F7889D9E /* Pods-NAMU_Torch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU_Torch.release.xcconfig"; path = "Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch.release.xcconfig"; sourceTree = "<group>"; };
 		A2E8C334B78527329646F8E6 /* Pods-NAMU_Torch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU_Torch.debug.xcconfig"; path = "Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch.debug.xcconfig"; sourceTree = "<group>"; };
 		D2C628CAB4F98D19727A20F7 /* Pods_NAMU_Torch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAMU_Torch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,11 +86,8 @@
 		83038C212328650300075247 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				83038C232328652200075247 /* UberMove-Bold.TTF */,
-				83038C242328652200075247 /* UberMove-Light.ttf */,
-				83038C222328652200075247 /* UberMove-Medium.TTF */,
-				83038C252328652200075247 /* UberMove-Regular.TTF */,
 				83920EEE2348F362006C116D /* NAMU-1960.otf */,
+				83DBEA862359069800CE3180 /* NAMU-1910alt.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -156,9 +149,8 @@
 				833C9FF62326ED0400A5FD51 /* AppDelegate.swift */,
 				8324CA0B23413B53000B7BDE /* Controllers */,
 				8324CA0D23413BAA000B7BDE /* Model */,
+				83DBEA88235917D900CE3180 /* Views */,
 				8324CA0C23413B7B000B7BDE /* Helpers */,
-				833C9FFA2326ED0400A5FD51 /* Main.storyboard */,
-				833C9FFF2326ED0500A5FD51 /* LaunchScreen.storyboard */,
 				833C9FFD2326ED0500A5FD51 /* Assets.xcassets */,
 			);
 			path = NAMU_Torch;
@@ -179,6 +171,16 @@
 			children = (
 			);
 			path = "Torch Projects";
+			sourceTree = "<group>";
+		};
+		83DBEA88235917D900CE3180 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				833C9FFA2326ED0400A5FD51 /* Main.storyboard */,
+				833C9FFF2326ED0500A5FD51 /* LaunchScreen.storyboard */,
+				83DBEA892359181400CE3180 /* CollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,15 +243,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83038C272328652200075247 /* UberMove-Bold.TTF in Resources */,
 				833CA00F2326F63300A5FD51 /* envmap.png in Resources */,
 				833CA0012326ED0500A5FD51 /* LaunchScreen.storyboard in Resources */,
 				833C9FFE2326ED0500A5FD51 /* Assets.xcassets in Resources */,
 				833C9FFC2326ED0400A5FD51 /* Main.storyboard in Resources */,
+				83DBEA872359069800CE3180 /* NAMU-1910alt.otf in Resources */,
 				83920EEF2348F362006C116D /* NAMU-1960.otf in Resources */,
-				83038C282328652200075247 /* UberMove-Light.ttf in Resources */,
-				83038C292328652200075247 /* UberMove-Regular.TTF in Resources */,
-				83038C262328652200075247 /* UberMove-Medium.TTF in Resources */,
+				83DBEA8A2359181400CE3180 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

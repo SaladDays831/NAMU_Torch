@@ -38,20 +38,22 @@ extension ArtsViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return artObjects.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
+        let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
+        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        return CGSize(width: size, height: size)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let row = artObjects[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CustomCollectionViewCell
         
-        
-        
-        if let art = row.image {
+        if let artURL = row.image {
             print("YES THIS IS FUCKING ART")
-            cell.artImageView.sd_setImage(with: URL(string: art), placeholderImage: UIImage(named: "leo"))
+            //cell.artImageView.sd_setImage(with: URL(string: artURL), placeholderImage: UIImage(named: "leo"))
+            cell.artImageView.image = UIImage(named: "leo")
         }
-        
-        
-        //cell.artImageView.image = UIImage(named: "1")
-        //cell.artImageView.downloaded(from: artObjects[0].image!)
         
         return cell
     }
