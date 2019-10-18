@@ -26,7 +26,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     let popUpContentManager = PopUpContentManager.shared
     
  //MARK: Project URL
-  var projectURL = Bundle.main.url(forResource: "NAMU-27", withExtension: "torchkitproj")!
+  var projectURL = Bundle.main.url(forResource: "NAMU-26", withExtension: "torchkitproj")!
     var projectIsLoaded = false
     var loadedProject: TorchProjectNode?
 

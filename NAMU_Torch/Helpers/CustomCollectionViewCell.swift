@@ -13,7 +13,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var artImageView: UIImageView!
     
-    
     override func prepareForReuse() {
       super.prepareForReuse()
       self.artImageView.sd_cancelCurrentImageLoad()
