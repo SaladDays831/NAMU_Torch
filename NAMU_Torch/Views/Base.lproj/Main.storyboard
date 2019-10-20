@@ -417,7 +417,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RIy-fi-nrx">
                                 <rect key="frame" x="70" y="122" width="235" height="353"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="353" id="S15-Uk-sc8"/>
+                                    <constraint firstAttribute="height" constant="353" id="nOF-ai-mC5"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iH2-Ok-QBP">
@@ -468,7 +468,7 @@
                     </view>
                     <connections>
                         <outlet property="artDescription" destination="iH2-Ok-QBP" id="Iwh-WQ-70F"/>
-                        <outlet property="artImageHeight" destination="S15-Uk-sc8" id="If5-c0-GyA"/>
+                        <outlet property="artHeightConstraint" destination="nOF-ai-mC5" id="goN-c3-vYu"/>
                         <outlet property="artImageView" destination="RIy-fi-nrx" id="wPn-2c-NoL"/>
                         <outlet property="artName" destination="2hl-aI-XZR" id="aUj-9d-LVt"/>
                         <outlet property="artistYearLabel" destination="ARe-f7-i76" id="I6i-Yk-xmO"/>
