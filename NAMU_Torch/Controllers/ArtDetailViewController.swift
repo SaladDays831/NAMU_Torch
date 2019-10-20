@@ -19,8 +19,7 @@ class ArtDetailViewController: UIViewController {
     var descriptionText = ""
     var imageURL = ""
     var artNameText = ""
-    var artistNameText = ""
-    var artDateText = ""
+    var author_yearText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +27,7 @@ class ArtDetailViewController: UIViewController {
         setImage()
         artDescription.text = descriptionText
         artName.text = "«\(artNameText)»"
+        artistYearLabel.text = author_yearText
         
     }
     

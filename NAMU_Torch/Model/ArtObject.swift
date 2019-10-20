@@ -29,6 +29,7 @@ struct ArtObject : Codable {
     let id : Int?
     let image : String?
     let name : String?
+    let authoryear : String?
     let nextconnection : String?
     let trigger1description : String?
     let trigger1name : String?
@@ -45,6 +46,7 @@ struct ArtObject : Codable {
                 case id = "id"
                 case image = "image"
                 case name = "name"
+                case authoryear = "authoryear"
                 case nextconnection = "nextconnection"
                 case trigger1description = "trigger1description"
                 case trigger1name = "trigger1name"
@@ -63,6 +65,7 @@ struct ArtObject : Codable {
                 id = try values.decodeIfPresent(Int.self, forKey: .id)
                 image = try values.decodeIfPresent(String.self, forKey: .image)
                 name = try values.decodeIfPresent(String.self, forKey: .name)
+                authoryear = try values.decodeIfPresent(String.self, forKey: .authoryear)
                 nextconnection = try values.decodeIfPresent(String.self, forKey: .nextconnection)
                 trigger1description = try values.decodeIfPresent(String.self, forKey: .trigger1description)
                 trigger1name = try values.decodeIfPresent(String.self, forKey: .trigger1name)

@@ -74,6 +74,7 @@ extension ArtsViewController: UICollectionViewDelegate, UICollectionViewDataSour
         vc?.artNameText = artObjects[indexPath.row].name!
         vc?.descriptionText = description
         vc?.imageURL = artObjects[indexPath.row].image!
+        vc?.author_yearText = artObjects[indexPath.row].authoryear!
        
         vc!.modalPresentationStyle = .fullScreen
         self.present(vc!, animated: true, completion: nil)
