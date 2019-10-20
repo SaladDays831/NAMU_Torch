@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sz3-RD-nHt">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -21,18 +21,18 @@
             <objects>
                 <viewController id="Sz3-RD-nHt" customClass="TorchProjectViewController" customModule="NAMU_Torch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hy8-dB-RV1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djS-PC-7tc">
-                                <rect key="frame" x="354" y="64" width="60" height="60"/>
+                                <rect key="frame" x="315" y="20" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="1cU-Pp-b1D"/>
                                     <constraint firstAttribute="width" constant="60" id="TN3-Ld-7kV"/>
                                 </constraints>
                                 <state key="normal" image="menuIcon"/>
                                 <connections>
-                                    <segue destination="Csx-gC-Yzz" kind="show" id="8sD-iz-Axv"/>
+                                    <action selector="menuButtonPressed:" destination="Sz3-RD-nHt" eventType="touchUpInside" id="kyS-Dp-bEO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -150,11 +150,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="KQj-0e-nCz" userLabel="Arts View Controller" customClass="ArtsViewController" customModule="NAMU_Torch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeo-CS-mYY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wXm-H0-SCe">
-                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
+                                <rect key="frame" x="0.0" y="160.5" width="375" height="506.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QPT-od-XXa">
                                     <size key="itemSize" width="50" height="50"/>
@@ -174,25 +174,24 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XN9-qd-jSl">
-                                <rect key="frame" x="374" y="68" width="30" height="30"/>
+                                <rect key="frame" x="335" y="24" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="GT3-uj-sJU"/>
                                     <constraint firstAttribute="height" constant="30" id="dqd-yM-e8w"/>
                                 </constraints>
                                 <state key="normal" image="closeIcon"/>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="Csx-gC-Yzz" eventType="touchUpInside" id="J1h-9n-EeC"/>
                                     <action selector="backButtonPressed:" destination="KQj-0e-nCz" eventType="touchUpInside" id="dOe-DY-eR3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список картин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrO-vg-N4V">
-                                <rect key="frame" x="117.5" y="68" width="179.5" height="29"/>
+                                <rect key="frame" x="98" y="24" width="179.5" height="29"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Це всі картини, які взаємодіють з нашим AR додатком. Підходь до них та вмикай камеру :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQC-Oe-Wi0">
-                                <rect key="frame" x="30" y="114" width="354" height="34"/>
+                                <rect key="frame" x="30" y="70" width="315" height="50.5"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -223,34 +222,206 @@
             </objects>
             <point key="canvasLocation" x="-1481.1594202898552" y="1532.8125"/>
         </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="AkQ-00-Emf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="fGg-Wj-PBr" userLabel="Contacts View Controller" customClass="ContactsViewController" customModule="NAMU_Torch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hxy-xc-ZuD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контакти" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxk-bC-xJo">
+                                <rect key="frame" x="132" y="24" width="111" height="29"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h55-9h-rJs">
+                                <rect key="frame" x="335" y="24" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IOn-ZM-gXm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Vkf-4L-zCb"/>
+                                    <constraint firstAttribute="width" constant="30" id="fZC-8R-qkF"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="oAT-gB-N3f"/>
+                                </constraints>
+                                <state key="normal" image="closeIcon"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="syL-So-OTf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адреса:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-6C-G5E">
+                                <rect key="frame" x="40" y="85" width="64.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4P7-3S-AeH">
+                                <rect key="frame" x="40" y="104.5" width="283" height="32"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                <state key="normal" title="вул. М. Грушевського, 6; Київ, 01001">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="adressPressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="hjj-ae-Izf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="тел." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2q-1b-gw1">
+                                <rect key="frame" x="40" y="168.5" width="30" height="19.5"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-m7-xxw">
+                                <rect key="frame" x="78" y="146.5" width="164" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-yI-WLS">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
+                                        <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                        <state key="normal" title="+38 (044) 278-13-57">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="phone1Pressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="WkC-0g-3Hs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xd-Zn-SVE">
+                                        <rect key="frame" x="0.0" y="32" width="164" height="32"/>
+                                        <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                        <state key="normal" title="+38 (044) 278-74-54">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="phone2Pressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="E3c-cd-MgZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neU-6V-71E">
+                                <rect key="frame" x="40" y="226.5" width="54" height="19.5"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSe-lG-xdy">
+                                <rect key="frame" x="102" y="220" width="147" height="32"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                <state key="normal" title="info@namu.kiev.ua">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailPressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="9lU-h1-rRx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Графік роботи:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it0-mg-b2N">
+                                <rect key="frame" x="40" y="284" width="117" height="19.5"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 — 18:00 - середа, четвер, неділя 12:00 — 20:00 - п’ятниця 11:00 — 19:00 - субота Вихідні: понеділок, вівторок." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBV-O3-TtU">
+                                <rect key="frame" x="40" y="311.5" width="304" height="77"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Каса зачиняється за 1 годину до закриття музею" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dS2-9I-8V3">
+                                <rect key="frame" x="17" y="396.5" width="341" height="17"/>
+                                <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qkr-lA-ehI">
+                                <rect key="frame" x="103.5" y="453.5" width="168" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTg-OV-jiF" userLabel="fbButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <state key="normal" image="fbIcon"/>
+                                        <connections>
+                                            <action selector="fbButtonPressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="rMz-wC-P7Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEH-yM-YQf" userLabel="instaButton">
+                                        <rect key="frame" x="64" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.4039215686" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="fbIcon"/>
+                                        <connections>
+                                            <action selector="instaButtonPressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="dV3-dR-edY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McT-w4-GQm" userLabel="webButton">
+                                        <rect key="frame" x="128" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="fbIcon"/>
+                                        <connections>
+                                            <action selector="websiteButtonPressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="Cnr-rY-KiG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uxk-bC-xJo" firstAttribute="centerX" secondItem="Hxy-xc-ZuD" secondAttribute="centerX" id="1Mp-tQ-1mc"/>
+                            <constraint firstItem="it0-mg-b2N" firstAttribute="leading" secondItem="eS4-xu-c8n" secondAttribute="leading" constant="40" id="2nX-sa-jG2"/>
+                            <constraint firstItem="u2q-1b-gw1" firstAttribute="top" secondItem="4P7-3S-AeH" secondAttribute="bottom" constant="32" id="7Yu-Q5-Nfj"/>
+                            <constraint firstItem="KSe-lG-xdy" firstAttribute="centerY" secondItem="neU-6V-71E" secondAttribute="centerY" id="8aR-ae-a0s"/>
+                            <constraint firstItem="u8c-m7-xxw" firstAttribute="leading" secondItem="u2q-1b-gw1" secondAttribute="trailing" constant="8" id="DAO-IT-IMk"/>
+                            <constraint firstItem="uxk-bC-xJo" firstAttribute="top" secondItem="eS4-xu-c8n" secondAttribute="top" constant="24" id="JEk-Ls-cct"/>
+                            <constraint firstItem="dS2-9I-8V3" firstAttribute="centerX" secondItem="Hxy-xc-ZuD" secondAttribute="centerX" id="MH3-tI-96i"/>
+                            <constraint firstItem="it0-mg-b2N" firstAttribute="top" secondItem="KSe-lG-xdy" secondAttribute="bottom" constant="32" id="PI4-WG-LtR"/>
+                            <constraint firstItem="neU-6V-71E" firstAttribute="top" secondItem="u8c-m7-xxw" secondAttribute="bottom" constant="16" id="Pnc-eA-wKs"/>
+                            <constraint firstItem="qkr-lA-ehI" firstAttribute="centerX" secondItem="Hxy-xc-ZuD" secondAttribute="centerX" id="Ps6-aX-7vL"/>
+                            <constraint firstItem="u8c-m7-xxw" firstAttribute="centerY" secondItem="u2q-1b-gw1" secondAttribute="centerY" id="QFO-rT-N3e"/>
+                            <constraint firstItem="h55-9h-rJs" firstAttribute="top" secondItem="eS4-xu-c8n" secondAttribute="top" constant="24" id="SYH-5k-afc"/>
+                            <constraint firstItem="qkr-lA-ehI" firstAttribute="top" secondItem="dS2-9I-8V3" secondAttribute="bottom" constant="40" id="Sh8-0r-Yyy"/>
+                            <constraint firstItem="iBV-O3-TtU" firstAttribute="top" secondItem="it0-mg-b2N" secondAttribute="bottom" constant="8" id="VbR-2N-EXv"/>
+                            <constraint firstItem="4P7-3S-AeH" firstAttribute="top" secondItem="J1y-6C-G5E" secondAttribute="bottom" id="YQj-3Q-45V"/>
+                            <constraint firstItem="J1y-6C-G5E" firstAttribute="leading" secondItem="eS4-xu-c8n" secondAttribute="leading" constant="40" id="g4e-3H-hbd"/>
+                            <constraint firstItem="KSe-lG-xdy" firstAttribute="leading" secondItem="neU-6V-71E" secondAttribute="trailing" constant="8" id="h9D-yF-BBp"/>
+                            <constraint firstItem="eS4-xu-c8n" firstAttribute="trailing" secondItem="h55-9h-rJs" secondAttribute="trailing" constant="10" id="mJK-vr-vpd"/>
+                            <constraint firstItem="dS2-9I-8V3" firstAttribute="top" secondItem="iBV-O3-TtU" secondAttribute="bottom" constant="8" id="nGM-Vm-e5e"/>
+                            <constraint firstItem="J1y-6C-G5E" firstAttribute="top" secondItem="eS4-xu-c8n" secondAttribute="top" constant="85" id="oqE-eg-aif"/>
+                            <constraint firstItem="neU-6V-71E" firstAttribute="leading" secondItem="eS4-xu-c8n" secondAttribute="leading" constant="40" id="pjO-jU-hmn"/>
+                            <constraint firstItem="4P7-3S-AeH" firstAttribute="leading" secondItem="eS4-xu-c8n" secondAttribute="leading" constant="40" id="sOn-bA-pBB"/>
+                            <constraint firstItem="iBV-O3-TtU" firstAttribute="leading" secondItem="eS4-xu-c8n" secondAttribute="leading" constant="40" id="t0X-Xy-DoT"/>
+                            <constraint firstItem="u2q-1b-gw1" firstAttribute="leading" secondItem="eS4-xu-c8n" secondAttribute="leading" constant="40" id="vtb-Ub-USP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eS4-xu-c8n"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cfa-sA-bTi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rN-iC-AaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="1533"/>
+        </scene>
         <!--Art Detail View Controller-->
         <scene sceneID="rkr-zs-hgl">
             <objects>
                 <viewController storyboardIdentifier="ArtDetailViewController" id="35K-IW-Onj" userLabel="Art Detail View Controller" customClass="ArtDetailViewController" customModule="NAMU_Torch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yYZ-gk-dpP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Деталі картини" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEC-Y8-ATg">
-                                <rect key="frame" x="115.5" y="68" width="183" height="29"/>
+                                <rect key="frame" x="96" y="24" width="183" height="29"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;название картины&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-aI-XZR" userLabel="Art Name">
-                                <rect key="frame" x="87.5" y="105" width="239" height="29"/>
+                                <rect key="frame" x="68" y="61" width="239" height="29"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RIy-fi-nrx">
-                                <rect key="frame" x="70" y="166" width="274" height="353"/>
+                                <rect key="frame" x="70" y="122" width="235" height="353"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="353" id="S15-Uk-sc8"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iH2-Ok-QBP">
-                                <rect key="frame" x="30" y="568" width="354" height="294"/>
+                                <rect key="frame" x="30" y="524" width="315" height="143"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -258,13 +429,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя автора, год" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARe-f7-i76">
-                                <rect key="frame" x="151" y="527" width="112" height="17"/>
+                                <rect key="frame" x="131.5" y="483" width="112" height="17"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-qp-hyD">
-                                <rect key="frame" x="374" y="68" width="30" height="30"/>
+                                <rect key="frame" x="335" y="24" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZJR-6l-mdJ"/>
                                     <constraint firstAttribute="width" constant="30" id="lhY-eN-TDH"/>
@@ -310,28 +481,28 @@
         <!--Other View Controller-->
         <scene sceneID="e9D-kq-zbu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Csx-gC-Yzz" userLabel="Other View Controller" customClass="OtherViewController" customModule="NAMU_Torch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menuVC" modalPresentationStyle="fullScreen" id="Csx-gC-Yzz" userLabel="Other View Controller" customClass="OtherViewController" customModule="NAMU_Torch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZn-tR-XnV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-VY-htA">
-                                <rect key="frame" x="0.0" y="121" width="414" height="741"/>
+                                <rect key="frame" x="0.0" y="77" width="375" height="590"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="Wg9-Mn-mOF">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wg9-Mn-mOF" id="0nS-cT-Hck">
-                                            <rect key="frame" x="0.0" y="0.0" width="382.5" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfB-gg-PUg">
-                                <rect key="frame" x="374" y="68" width="30" height="30"/>
+                                <rect key="frame" x="335" y="24" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0KN-Ng-0UT"/>
                                     <constraint firstAttribute="width" constant="30" id="Iut-Zd-eDm"/>
@@ -342,7 +513,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ІНШЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-fd-KaI">
-                                <rect key="frame" x="173" y="68" width="68" height="29"/>
+                                <rect key="frame" x="153.5" y="24" width="68" height="29"/>
                                 <fontDescription key="fontDescription" name="NAMU-1910alt" family="NAMU" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -365,15 +536,17 @@
                     <connections>
                         <outlet property="tableView" destination="nzq-VY-htA" id="c7k-BV-evL"/>
                         <segue destination="KQj-0e-nCz" kind="show" identifier="toArts" id="GOE-NW-DhJ"/>
+                        <segue destination="fGg-Wj-PBr" kind="show" identifier="toContacts" id="MDs-6y-v6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaY-Mg-yFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="813"/>
+            <point key="canvasLocation" x="-207" y="801"/>
         </scene>
     </scenes>
     <resources>
         <image name="closeIcon" width="16" height="16"/>
+        <image name="fbIcon" width="40" height="40"/>
         <image name="hall" width="2481" height="1916"/>
         <image name="leo" width="205" height="196"/>
         <image name="menuIcon" width="30" height="30"/>

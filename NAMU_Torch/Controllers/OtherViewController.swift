@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol TorchProjectDelegate {
+    func resetTorchProj()
+}
+
 class OtherViewController: UIViewController {
+    
+    var torchProjDelegate: TorchProjectDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -56,6 +62,17 @@ class OtherViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func presentTorchProjRestartAlert() {
+        let alert = UIAlertController(title: "Почати екскурсію з початку?", message: nil, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Так", style: UIAlertAction.Style.default, handler: { action in
+            self.torchProjDelegate?.resetTorchProj()
+        }))
+        alert.addAction(UIAlertAction(title: "Скасувати", style: UIAlertAction.Style.cancel, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
 }
 
@@ -87,6 +104,7 @@ extension OtherViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             print("start over")
+            presentTorchProjRestartAlert()
         case 1:
             print("onboarding restart")
             presentOnboardingRestartAlert()
@@ -101,6 +119,7 @@ extension OtherViewController: UITableViewDelegate, UITableViewDataSource {
             print("how to get to NAMU")
         case 6:
             print("contacts")
+            performSegue(withIdentifier: "toContacts", sender: self)
         case 7:
             print("feedback")
         default:

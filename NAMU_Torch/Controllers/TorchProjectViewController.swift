@@ -26,7 +26,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     let popUpContentManager = PopUpContentManager.shared
     
  //MARK: Project URL
-  var projectURL = Bundle.main.url(forResource: "NAMU-26", withExtension: "torchkitproj")!
+  var projectURL = Bundle.main.url(forResource: "NAMU-27", withExtension: "torchkitproj")!
     var projectIsLoaded = false
     var loadedProject: TorchProjectNode?
 
@@ -45,7 +45,6 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
   override func viewDidLoad() {
     super.viewDidLoad()
     self.sceneView = ARSCNView(frame: self.view.bounds)
-    
     
     popUpContentManager.loadData()
     print(artObjects.count)
@@ -67,7 +66,6 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     self.sessionInfoLabel!.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8).isActive = true
     self.sessionInfoLabel!.topAnchor.constraint(equalTo: self.sceneView.topAnchor, constant: 75.0).isActive = true
     self.sessionInfoLabel!.heightAnchor.constraint(equalToConstant: 180.0)
-    
     
   }
     
@@ -105,7 +103,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         
         
          //DEBUG SETTING SCENE
-        //loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
+        loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
     }
    
     
@@ -401,6 +399,11 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     
     
     
+    @IBAction func menuButtonPressed(_ sender: UIButton) {
+        let menuVC = storyboard?.instantiateViewController(withIdentifier: "menuVC") as! OtherViewController
+        present(menuVC, animated: true, completion: nil)
+        menuVC.torchProjDelegate = self
+    }
     
     
     
@@ -523,4 +526,11 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     return NSKeyedUnarchiver(forReadingWith: data as Data)
   }
     
+}
+
+extension TorchProjectViewController: TorchProjectDelegate {
+    func resetTorchProj() {
+        loadedProject?.setScene(sceneName: "initial", resetCurrentScene: true)
+        print("AR session started over")
+    }
 }

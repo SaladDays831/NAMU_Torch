@@ -26,8 +26,9 @@
 		83A46351234340960086069E /* PopUpContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A46350234340960086069E /* PopUpContentManager.swift */; };
 		83DBEA872359069800CE3180 /* NAMU-1910alt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA862359069800CE3180 /* NAMU-1910alt.otf */; };
 		83DBEA8A2359181400CE3180 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA892359181400CE3180 /* CollectionViewCell.xib */; };
-		83DBEA8C235918AC00CE3180 /* NAMU-26.torchkitproj in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA8B235918AC00CE3180 /* NAMU-26.torchkitproj */; };
 		83DBEA8E2359296400CE3180 /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */; };
+		83DBEA90235A1AFE00CE3180 /* NAMU-27.torchkitproj in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA8F235A1AFD00CE3180 /* NAMU-27.torchkitproj */; };
+		83DBEA92235B4E0B00CE3180 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBEA91235B4E0B00CE3180 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +52,9 @@
 		83A46350234340960086069E /* PopUpContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpContentManager.swift; sourceTree = "<group>"; };
 		83DBEA862359069800CE3180 /* NAMU-1910alt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-1910alt.otf"; sourceTree = "<group>"; };
 		83DBEA892359181400CE3180 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		83DBEA8B235918AC00CE3180 /* NAMU-26.torchkitproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-26.torchkitproj"; sourceTree = "<group>"; };
 		83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
+		83DBEA8F235A1AFD00CE3180 /* NAMU-27.torchkitproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NAMU-27.torchkitproj"; path = "../../../Downloads/NAMU-27.torchkitproj"; sourceTree = "<group>"; };
+		83DBEA91235B4E0B00CE3180 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		91660024B56577C6F7889D9E /* Pods-NAMU_Torch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU_Torch.release.xcconfig"; path = "Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch.release.xcconfig"; sourceTree = "<group>"; };
 		A2E8C334B78527329646F8E6 /* Pods-NAMU_Torch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU_Torch.debug.xcconfig"; path = "Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch.debug.xcconfig"; sourceTree = "<group>"; };
 		D2C628CAB4F98D19727A20F7 /* Pods_NAMU_Torch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAMU_Torch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 				8368733D233C1C4600EC166C /* OtherViewController.swift */,
 				8368733F233C221700EC166C /* ArtsViewController.swift */,
 				83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */,
+				83DBEA91235B4E0B00CE3180 /* ContactsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,7 +177,7 @@
 		833CA01323284EF700A5FD51 /* Torch Projects */ = {
 			isa = PBXGroup;
 			children = (
-				83DBEA8B235918AC00CE3180 /* NAMU-26.torchkitproj */,
+				83DBEA8F235A1AFD00CE3180 /* NAMU-27.torchkitproj */,
 			);
 			path = "Torch Projects";
 			sourceTree = "<group>";
@@ -252,8 +255,8 @@
 				833CA00F2326F63300A5FD51 /* envmap.png in Resources */,
 				833CA0012326ED0500A5FD51 /* LaunchScreen.storyboard in Resources */,
 				833C9FFE2326ED0500A5FD51 /* Assets.xcassets in Resources */,
-				83DBEA8C235918AC00CE3180 /* NAMU-26.torchkitproj in Resources */,
 				833C9FFC2326ED0400A5FD51 /* Main.storyboard in Resources */,
+				83DBEA90235A1AFE00CE3180 /* NAMU-27.torchkitproj in Resources */,
 				83DBEA872359069800CE3180 /* NAMU-1910alt.otf in Resources */,
 				83920EEF2348F362006C116D /* NAMU-1960.otf in Resources */,
 				83DBEA8A2359181400CE3180 /* CollectionViewCell.xib in Resources */,
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83038C20232855F300075247 /* OnboardingViewController.swift in Sources */,
+				83DBEA92235B4E0B00CE3180 /* ContactsViewController.swift in Sources */,
 				83A46351234340960086069E /* PopUpContentManager.swift in Sources */,
 				8368733E233C1C4600EC166C /* OtherViewController.swift in Sources */,
 				833CA00B2326F62A00A5FD51 /* ProjectAnchorManager.swift in Sources */,
