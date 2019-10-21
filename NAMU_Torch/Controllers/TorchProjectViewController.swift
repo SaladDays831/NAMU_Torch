@@ -26,7 +26,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     let popUpContentManager = PopUpContentManager.shared
     
  //MARK: Project URL
-  var projectURL = Bundle.main.url(forResource: "NAMU-27", withExtension: "torchkitproj")!
+  var projectURL = Bundle.main.url(forResource: "NAMU-28", withExtension: "torchkitproj")!
     var projectIsLoaded = false
     var loadedProject: TorchProjectNode?
 
@@ -103,7 +103,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         
         
          //DEBUG SETTING SCENE
-        loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
+        //loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
     }
    
     
@@ -367,7 +367,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         
         if !fromBottom {
             attributes.position = .top
-            attributes.entryBackground = .color(color: .init(light: UIColor(named: "nextPopUp")!, dark: UIColor(named: "nextPopUp")!))
+            //attributes.entryBackground = .color(color: .init(light: UIColor(named: "nextPopUp")!, dark: UIColor(named: "nextPopUp")!))
         }
         
         SwiftEntryKit.display(entry: popUpView, using: attributes)
@@ -397,6 +397,10 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     }
     
     
+    
+    @IBAction func popupCloseButtonPressed(_ sender: UIButton) {
+        SwiftEntryKit.dismiss()
+    }
     
     
     @IBAction func menuButtonPressed(_ sender: UIButton) {
