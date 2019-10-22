@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:NAMU_Torch.xcodeproj">
+      location = "group:/Users/danil/Danil/NAMU_Torch/NAMU AR.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

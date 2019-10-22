@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch-frameworks.sh
+${PODS_ROOT}/Target Support Files/Pods-NAMU AR/Pods-NAMU AR-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/OnboardKit/OnboardKit.framework
 ${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

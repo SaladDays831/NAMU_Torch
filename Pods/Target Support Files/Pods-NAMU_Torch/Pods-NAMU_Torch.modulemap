@@ -1,6 +1,0 @@
-framework module Pods_NAMU_Torch {
-  umbrella header "Pods-NAMU_Torch-umbrella.h"
-
-  export *
-  module * { export * }
-}

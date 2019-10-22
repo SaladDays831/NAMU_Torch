@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C875F403BBC03357F39F92E /* Pods_NAMU_Torch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C628CAB4F98D19727A20F7 /* Pods_NAMU_Torch.framework */; };
+		423A23C6659D0C194A635D27 /* Pods_NAMU_AR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8D6D4F19CB3B077A9BE1CB /* Pods_NAMU_AR.framework */; };
 		83038C20232855F300075247 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038C1F232855F300075247 /* OnboardingViewController.swift */; };
+		8314FB37235F1DB7002177FB /* NAMU-27.torchkitproj in Resources */ = {isa = PBXBuildFile; fileRef = 8314FB36235F1DB7002177FB /* NAMU-27.torchkitproj */; };
 		8324CA0F23413BC9000B7BDE /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324CA0E23413BC9000B7BDE /* ArtObject.swift */; };
 		833C9FF72326ED0400A5FD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833C9FF62326ED0400A5FD51 /* AppDelegate.swift */; };
 		833C9FFC2326ED0400A5FD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833C9FFA2326ED0400A5FD51 /* Main.storyboard */; };
@@ -28,13 +29,15 @@
 		83DBEA8A2359181400CE3180 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA892359181400CE3180 /* CollectionViewCell.xib */; };
 		83DBEA8E2359296400CE3180 /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */; };
 		83DBEA92235B4E0B00CE3180 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBEA91235B4E0B00CE3180 /* ContactsViewController.swift */; };
-		83DD043C235D88E400292890 /* NAMU-28.torchkitproj in Resources */ = {isa = PBXBuildFile; fileRef = 83DD043B235D88E400292890 /* NAMU-28.torchkitproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15324E7D7A5FF8D77EEB8BEF /* Pods-NAMU AR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU AR.debug.xcconfig"; path = "Target Support Files/Pods-NAMU AR/Pods-NAMU AR.debug.xcconfig"; sourceTree = "<group>"; };
+		2A8D6D4F19CB3B077A9BE1CB /* Pods_NAMU_AR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAMU_AR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83038C1F232855F300075247 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8314FB36235F1DB7002177FB /* NAMU-27.torchkitproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-27.torchkitproj"; sourceTree = "<group>"; };
 		8324CA0E23413BC9000B7BDE /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
-		833C9FF32326ED0400A5FD51 /* NAMU_Torch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NAMU_Torch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		833C9FF32326ED0400A5FD51 /* NAMU AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NAMU AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		833C9FF62326ED0400A5FD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		833C9FFB2326ED0400A5FD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		833C9FFD2326ED0500A5FD51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,10 +57,9 @@
 		83DBEA892359181400CE3180 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
 		83DBEA91235B4E0B00CE3180 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		83DD043B235D88E400292890 /* NAMU-28.torchkitproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-28.torchkitproj"; sourceTree = "<group>"; };
 		91660024B56577C6F7889D9E /* Pods-NAMU_Torch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU_Torch.release.xcconfig"; path = "Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch.release.xcconfig"; sourceTree = "<group>"; };
 		A2E8C334B78527329646F8E6 /* Pods-NAMU_Torch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU_Torch.debug.xcconfig"; path = "Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch.debug.xcconfig"; sourceTree = "<group>"; };
-		D2C628CAB4F98D19727A20F7 /* Pods_NAMU_Torch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAMU_Torch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98DEEF542DDCAE57B01EB73 /* Pods-NAMU AR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU AR.release.xcconfig"; path = "Target Support Files/Pods-NAMU AR/Pods-NAMU AR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C875F403BBC03357F39F92E /* Pods_NAMU_Torch.framework in Frameworks */,
+				423A23C6659D0C194A635D27 /* Pods_NAMU_AR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,8 @@
 			children = (
 				A2E8C334B78527329646F8E6 /* Pods-NAMU_Torch.debug.xcconfig */,
 				91660024B56577C6F7889D9E /* Pods-NAMU_Torch.release.xcconfig */,
+				15324E7D7A5FF8D77EEB8BEF /* Pods-NAMU AR.debug.xcconfig */,
+				C98DEEF542DDCAE57B01EB73 /* Pods-NAMU AR.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -84,7 +88,7 @@
 		655983F515A8EB81FC38FE56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D2C628CAB4F98D19727A20F7 /* Pods_NAMU_Torch.framework */,
+				2A8D6D4F19CB3B077A9BE1CB /* Pods_NAMU_AR.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,7 +136,7 @@
 		833C9FEA2326ED0400A5FD51 = {
 			isa = PBXGroup;
 			children = (
-				833C9FF52326ED0400A5FD51 /* NAMU_Torch */,
+				833C9FF52326ED0400A5FD51 /* NAMU AR */,
 				833CA01323284EF700A5FD51 /* Torch Projects */,
 				833CA01223284EA600A5FD51 /* Torch Helpers */,
 				83038C212328650300075247 /* Fonts */,
@@ -145,12 +149,12 @@
 		833C9FF42326ED0400A5FD51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				833C9FF32326ED0400A5FD51 /* NAMU_Torch.app */,
+				833C9FF32326ED0400A5FD51 /* NAMU AR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		833C9FF52326ED0400A5FD51 /* NAMU_Torch */ = {
+		833C9FF52326ED0400A5FD51 /* NAMU AR */ = {
 			isa = PBXGroup;
 			children = (
 				833CA0022326ED0500A5FD51 /* Info.plist */,
@@ -161,7 +165,7 @@
 				8324CA0C23413B7B000B7BDE /* Helpers */,
 				833C9FFD2326ED0500A5FD51 /* Assets.xcassets */,
 			);
-			path = NAMU_Torch;
+			path = "NAMU AR";
 			sourceTree = "<group>";
 		};
 		833CA01223284EA600A5FD51 /* Torch Helpers */ = {
@@ -177,7 +181,7 @@
 		833CA01323284EF700A5FD51 /* Torch Projects */ = {
 			isa = PBXGroup;
 			children = (
-				83DD043B235D88E400292890 /* NAMU-28.torchkitproj */,
+				8314FB36235F1DB7002177FB /* NAMU-27.torchkitproj */,
 			);
 			path = "Torch Projects";
 			sourceTree = "<group>";
@@ -195,9 +199,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		833C9FF22326ED0400A5FD51 /* NAMU_Torch */ = {
+		833C9FF22326ED0400A5FD51 /* NAMU AR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 833CA0052326ED0500A5FD51 /* Build configuration list for PBXNativeTarget "NAMU_Torch" */;
+			buildConfigurationList = 833CA0052326ED0500A5FD51 /* Build configuration list for PBXNativeTarget "NAMU AR" */;
 			buildPhases = (
 				12F99E60189C34550002F724 /* [CP] Check Pods Manifest.lock */,
 				833C9FEF2326ED0400A5FD51 /* Sources */,
@@ -209,9 +213,9 @@
 			);
 			dependencies = (
 			);
-			name = NAMU_Torch;
+			name = "NAMU AR";
 			productName = NAMU_Torch;
-			productReference = 833C9FF32326ED0400A5FD51 /* NAMU_Torch.app */;
+			productReference = 833C9FF32326ED0400A5FD51 /* NAMU AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -229,7 +233,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 833C9FEE2326ED0400A5FD51 /* Build configuration list for PBXProject "NAMU_Torch" */;
+			buildConfigurationList = 833C9FEE2326ED0400A5FD51 /* Build configuration list for PBXProject "NAMU AR" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -242,7 +246,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				833C9FF22326ED0400A5FD51 /* NAMU_Torch */,
+				833C9FF22326ED0400A5FD51 /* NAMU AR */,
 			);
 		};
 /* End PBXProject section */
@@ -256,8 +260,8 @@
 				833CA0012326ED0500A5FD51 /* LaunchScreen.storyboard in Resources */,
 				833C9FFE2326ED0500A5FD51 /* Assets.xcassets in Resources */,
 				833C9FFC2326ED0400A5FD51 /* Main.storyboard in Resources */,
+				8314FB37235F1DB7002177FB /* NAMU-27.torchkitproj in Resources */,
 				83DBEA872359069800CE3180 /* NAMU-1910alt.otf in Resources */,
-				83DD043C235D88E400292890 /* NAMU-28.torchkitproj in Resources */,
 				83920EEF2348F362006C116D /* NAMU-1960.otf in Resources */,
 				83DBEA8A2359181400CE3180 /* CollectionViewCell.xib in Resources */,
 			);
@@ -281,7 +285,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NAMU_Torch-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-NAMU AR-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -294,15 +298,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NAMU AR/Pods-NAMU AR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NAMU AR/Pods-NAMU AR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NAMU_Torch/Pods-NAMU_Torch-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NAMU AR/Pods-NAMU AR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,18 +474,18 @@
 		};
 		833CA0062326ED0500A5FD51 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2E8C334B78527329646F8E6 /* Pods-NAMU_Torch.debug.xcconfig */;
+			baseConfigurationReference = 15324E7D7A5FF8D77EEB8BEF /* Pods-NAMU AR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QF3988KG3;
-				INFOPLIST_FILE = NAMU_Torch/Info.plist;
+				INFOPLIST_FILE = "NAMU AR/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dkurylo.NAMU-Torch";
+				PRODUCT_BUNDLE_IDENTIFIER = "dkurylo.NAMU-AR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -490,18 +494,18 @@
 		};
 		833CA0072326ED0500A5FD51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91660024B56577C6F7889D9E /* Pods-NAMU_Torch.release.xcconfig */;
+			baseConfigurationReference = C98DEEF542DDCAE57B01EB73 /* Pods-NAMU AR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QF3988KG3;
-				INFOPLIST_FILE = NAMU_Torch/Info.plist;
+				INFOPLIST_FILE = "NAMU AR/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dkurylo.NAMU-Torch";
+				PRODUCT_BUNDLE_IDENTIFIER = "dkurylo.NAMU-AR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,7 +515,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		833C9FEE2326ED0400A5FD51 /* Build configuration list for PBXProject "NAMU_Torch" */ = {
+		833C9FEE2326ED0400A5FD51 /* Build configuration list for PBXProject "NAMU AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				833CA0032326ED0500A5FD51 /* Debug */,
@@ -520,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		833CA0052326ED0500A5FD51 /* Build configuration list for PBXNativeTarget "NAMU_Torch" */ = {
+		833CA0052326ED0500A5FD51 /* Build configuration list for PBXNativeTarget "NAMU AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				833CA0062326ED0500A5FD51 /* Debug */,

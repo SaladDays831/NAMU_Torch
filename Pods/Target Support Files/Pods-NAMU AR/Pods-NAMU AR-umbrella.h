@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_NAMU_TorchVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_NAMU_TorchVersionString[];
+FOUNDATION_EXPORT double Pods_NAMU_ARVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_NAMU_ARVersionString[];
 
