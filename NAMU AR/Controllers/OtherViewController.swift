@@ -20,7 +20,7 @@ class OtherViewController: UIViewController {
     
     let onboardingVC = OnboardingViewController.shared
     
-    let sectionItems = ["Розпочати AR екскурсію з початку", "Як користуватися додатком", "Список картин", "3D модель церкви Вознесіння", "3D мапа музею", "Як дістатися до музею", "Контакти", "Залишити фідбек"]
+    let sectionItems = ["Розпочати AR екскурсію з початку", "Як користуватися додатком", "Список картин", "3D модель церкви Вознесіння", "3D мапа музею", "Контакти", "Залишити фідбек", "Про додаток"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,12 +116,13 @@ extension OtherViewController: UITableViewDelegate, UITableViewDataSource {
         case 4:
             print("3d map")
         case 5:
-            print("how to get to NAMU")
-        case 6:
             print("contacts")
             performSegue(withIdentifier: "toContacts", sender: self)
-        case 7:
+        case 6:
             print("feedback")
+        case 7:
+            print("About")
+            performSegue(withIdentifier: "toAbout", sender: self)
         default:
             break
         }

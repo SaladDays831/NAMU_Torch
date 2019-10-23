@@ -26,7 +26,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     let popUpContentManager = PopUpContentManager.shared
     
  //MARK: Project URL
-  var projectURL = Bundle.main.url(forResource: "NAMU-27", withExtension: "torchkitproj")!
+  var projectURL = Bundle.main.url(forResource: "NAMU-10", withExtension: "torchkitproj")!
     var projectIsLoaded = false
     var loadedProject: TorchProjectNode?
 
@@ -103,7 +103,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         
         
          //DEBUG SETTING SCENE
-        //loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
+        loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
     }
    
     
@@ -262,6 +262,13 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         case "triggerChurchNotif":
             self.notificationText.text = "Подивись на ікону попереду!"
             self.presentNotification()
+            
+        case "church1tapped":
+            self.popUpDescription.text = "Чувак, эта вечеринка отстой"
+            self.presentPopUp(fromBottom: true)
+        case "church2tapped":
+            self.popUpDescription.text = "Я, бля, ненавижу этих людей"
+            self.presentPopUp(fromBottom: true)
             
         default:
             break

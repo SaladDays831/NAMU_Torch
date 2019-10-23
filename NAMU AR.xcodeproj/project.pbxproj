@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		423A23C6659D0C194A635D27 /* Pods_NAMU_AR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8D6D4F19CB3B077A9BE1CB /* Pods_NAMU_AR.framework */; };
 		83038C20232855F300075247 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038C1F232855F300075247 /* OnboardingViewController.swift */; };
-		8314FB37235F1DB7002177FB /* NAMU-27.torchkitproj in Resources */ = {isa = PBXBuildFile; fileRef = 8314FB36235F1DB7002177FB /* NAMU-27.torchkitproj */; };
 		8324CA0F23413BC9000B7BDE /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324CA0E23413BC9000B7BDE /* ArtObject.swift */; };
 		833C9FF72326ED0400A5FD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833C9FF62326ED0400A5FD51 /* AppDelegate.swift */; };
 		833C9FFC2326ED0400A5FD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833C9FFA2326ED0400A5FD51 /* Main.storyboard */; };
@@ -25,6 +24,10 @@
 		83920EEF2348F362006C116D /* NAMU-1960.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83920EEE2348F362006C116D /* NAMU-1960.otf */; };
 		83A4634F234162C20086069E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4634E234162C20086069E /* Extensions.swift */; };
 		83A46351234340960086069E /* PopUpContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A46350234340960086069E /* PopUpContentManager.swift */; };
+		83D82020235FC0CC00BEFDCF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8201F235FC0CC00BEFDCF /* AboutViewController.swift */; };
+		83D82023235FC4F400BEFDCF /* ChurchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D82022235FC4F400BEFDCF /* ChurchViewController.swift */; };
+		83D82025235FC50100BEFDCF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D82024235FC50100BEFDCF /* MapViewController.swift */; };
+		83D8202D235FE79E00BEFDCF /* NAMU-10.torchkitproj in Resources */ = {isa = PBXBuildFile; fileRef = 83D8202C235FE79D00BEFDCF /* NAMU-10.torchkitproj */; };
 		83DBEA872359069800CE3180 /* NAMU-1910alt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA862359069800CE3180 /* NAMU-1910alt.otf */; };
 		83DBEA8A2359181400CE3180 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83DBEA892359181400CE3180 /* CollectionViewCell.xib */; };
 		83DBEA8E2359296400CE3180 /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */; };
@@ -35,7 +38,6 @@
 		15324E7D7A5FF8D77EEB8BEF /* Pods-NAMU AR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAMU AR.debug.xcconfig"; path = "Target Support Files/Pods-NAMU AR/Pods-NAMU AR.debug.xcconfig"; sourceTree = "<group>"; };
 		2A8D6D4F19CB3B077A9BE1CB /* Pods_NAMU_AR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAMU_AR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83038C1F232855F300075247 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		8314FB36235F1DB7002177FB /* NAMU-27.torchkitproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-27.torchkitproj"; sourceTree = "<group>"; };
 		8324CA0E23413BC9000B7BDE /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
 		833C9FF32326ED0400A5FD51 /* NAMU AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NAMU AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		833C9FF62326ED0400A5FD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,10 @@
 		83920EEE2348F362006C116D /* NAMU-1960.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-1960.otf"; sourceTree = "<group>"; };
 		83A4634E234162C20086069E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		83A46350234340960086069E /* PopUpContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpContentManager.swift; sourceTree = "<group>"; };
+		83D8201F235FC0CC00BEFDCF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		83D82022235FC4F400BEFDCF /* ChurchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchViewController.swift; sourceTree = "<group>"; };
+		83D82024235FC50100BEFDCF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		83D8202C235FE79D00BEFDCF /* NAMU-10.torchkitproj */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-10.torchkitproj"; sourceTree = "<group>"; };
 		83DBEA862359069800CE3180 /* NAMU-1910alt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NAMU-1910alt.otf"; sourceTree = "<group>"; };
 		83DBEA892359181400CE3180 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
@@ -107,9 +113,7 @@
 			children = (
 				833CA00A2326F62A00A5FD51 /* TorchProjectViewController.swift */,
 				8368733D233C1C4600EC166C /* OtherViewController.swift */,
-				8368733F233C221700EC166C /* ArtsViewController.swift */,
-				83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */,
-				83DBEA91235B4E0B00CE3180 /* ContactsViewController.swift */,
+				83D82021235FC46A00BEFDCF /* Menu */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,9 +185,22 @@
 		833CA01323284EF700A5FD51 /* Torch Projects */ = {
 			isa = PBXGroup;
 			children = (
-				8314FB36235F1DB7002177FB /* NAMU-27.torchkitproj */,
+				83D8202C235FE79D00BEFDCF /* NAMU-10.torchkitproj */,
 			);
 			path = "Torch Projects";
+			sourceTree = "<group>";
+		};
+		83D82021235FC46A00BEFDCF /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8368733F233C221700EC166C /* ArtsViewController.swift */,
+				83DBEA8D2359296400CE3180 /* ArtDetailViewController.swift */,
+				83DBEA91235B4E0B00CE3180 /* ContactsViewController.swift */,
+				83D8201F235FC0CC00BEFDCF /* AboutViewController.swift */,
+				83D82022235FC4F400BEFDCF /* ChurchViewController.swift */,
+				83D82024235FC50100BEFDCF /* MapViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		83DBEA88235917D900CE3180 /* Views */ = {
@@ -260,7 +277,7 @@
 				833CA0012326ED0500A5FD51 /* LaunchScreen.storyboard in Resources */,
 				833C9FFE2326ED0500A5FD51 /* Assets.xcassets in Resources */,
 				833C9FFC2326ED0400A5FD51 /* Main.storyboard in Resources */,
-				8314FB37235F1DB7002177FB /* NAMU-27.torchkitproj in Resources */,
+				83D8202D235FE79E00BEFDCF /* NAMU-10.torchkitproj in Resources */,
 				83DBEA872359069800CE3180 /* NAMU-1910alt.otf in Resources */,
 				83920EEF2348F362006C116D /* NAMU-1960.otf in Resources */,
 				83DBEA8A2359181400CE3180 /* CollectionViewCell.xib in Resources */,
@@ -326,9 +343,12 @@
 				8324CA0F23413BC9000B7BDE /* ArtObject.swift in Sources */,
 				833CA00D2326F62A00A5FD51 /* TorchProjectViewController.swift in Sources */,
 				833CA00C2326F62A00A5FD51 /* Plane.swift in Sources */,
+				83D82023235FC4F400BEFDCF /* ChurchViewController.swift in Sources */,
+				83D82020235FC0CC00BEFDCF /* AboutViewController.swift in Sources */,
 				833C9FF72326ED0400A5FD51 /* AppDelegate.swift in Sources */,
 				83A4634F234162C20086069E /* Extensions.swift in Sources */,
 				83687340233C221700EC166C /* ArtsViewController.swift in Sources */,
+				83D82025235FC50100BEFDCF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
