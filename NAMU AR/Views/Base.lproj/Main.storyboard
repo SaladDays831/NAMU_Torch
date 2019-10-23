@@ -35,22 +35,34 @@
                                     <action selector="menuButtonPressed:" destination="Sz3-RD-nHt" eventType="touchUpInside" id="kyS-Dp-bEO"/>
                                 </connections>
                             </button>
+                            <visualEffectView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCZ-uk-2Oe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DTe-PO-PDf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="VCZ-uk-2Oe" firstAttribute="top" secondItem="Hy8-dB-RV1" secondAttribute="top" id="5rL-0b-VFq"/>
+                            <constraint firstItem="VCZ-uk-2Oe" firstAttribute="leading" secondItem="a2Y-3r-QWy" secondAttribute="leading" id="9CL-Zr-BEc"/>
+                            <constraint firstItem="VCZ-uk-2Oe" firstAttribute="trailing" secondItem="a2Y-3r-QWy" secondAttribute="trailing" id="Eq4-mY-k1E"/>
+                            <constraint firstAttribute="bottom" secondItem="VCZ-uk-2Oe" secondAttribute="bottom" id="LjI-vS-iyU"/>
                             <constraint firstItem="djS-PC-7tc" firstAttribute="top" secondItem="a2Y-3r-QWy" secondAttribute="top" constant="20" id="V5x-70-CGe"/>
                             <constraint firstItem="djS-PC-7tc" firstAttribute="trailing" secondItem="a2Y-3r-QWy" secondAttribute="trailing" id="oBP-8G-rOB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a2Y-3r-QWy"/>
                     </view>
                     <connections>
-                        <outlet property="guideOKButton" destination="5vB-pC-jmz" id="s1I-bM-Dyj"/>
                         <outlet property="guideView" destination="JDk-hB-QPz" id="Xgj-wL-bI0"/>
                         <outlet property="menuButton" destination="djS-PC-7tc" id="0dd-wI-qa6"/>
                         <outlet property="notificationText" destination="Bej-JO-eXu" id="U8D-tc-ZBU"/>
                         <outlet property="notificationView" destination="Xhz-FG-9ut" id="hwW-MH-3ZN"/>
                         <outlet property="popUpDescription" destination="oz9-t7-AQm" id="RX0-Me-vkb"/>
                         <outlet property="popUpView" destination="ROd-P6-y6J" id="BKf-3S-462"/>
+                        <outlet property="visualEffectView" destination="VCZ-uk-2Oe" id="FOe-Bg-oFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzC-z0-ybF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -58,36 +70,31 @@
                     <rect key="frame" x="0.0" y="0.0" width="246" height="309"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Для активізування режиму AR знайди це місце у холі та наведи на нього камеру :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caQ-vz-yd1">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здається, ви офлайн. Для роботи NAMU AR потрібен інтернет." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caQ-vz-yd1">
                             <rect key="frame" x="20" y="20" width="206" height="50.5"/>
                             <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vB-pC-jmz">
-                            <rect key="frame" x="20" y="259" width="206" height="30"/>
-                            <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
-                            <state key="normal" title="Пошел нахуй"/>
-                            <connections>
-                                <action selector="guideOKButtonPressed:" destination="Sz3-RD-nHt" eventType="touchUpInside" id="SeR-gU-v2X"/>
-                            </connections>
-                        </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="hall" translatesAutoresizingMaskIntoConstraints="NO" id="hFb-7y-OE0">
-                            <rect key="frame" x="20" y="90.5" width="206" height="148.5"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noInternetIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DUt-wo-z8e">
+                            <rect key="frame" x="59" y="90.5" width="128" height="128"/>
                         </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P.S. У музеї є безкоштовний WiFi!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmt-ei-pAm">
+                            <rect key="frame" x="14.5" y="268.5" width="217.5" height="16"/>
+                            <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="JSM-Ta-Scc" firstAttribute="trailing" secondItem="5vB-pC-jmz" secondAttribute="trailing" constant="20" id="3DM-zi-Kof"/>
-                        <constraint firstItem="hFb-7y-OE0" firstAttribute="top" secondItem="caQ-vz-yd1" secondAttribute="bottom" constant="20" id="Gls-eR-7eo"/>
-                        <constraint firstItem="JSM-Ta-Scc" firstAttribute="bottom" secondItem="5vB-pC-jmz" secondAttribute="bottom" constant="20" id="KO6-jK-eAf"/>
                         <constraint firstItem="caQ-vz-yd1" firstAttribute="top" secondItem="JDk-hB-QPz" secondAttribute="top" constant="20" id="Kt3-KF-YUd"/>
                         <constraint firstItem="caQ-vz-yd1" firstAttribute="leading" secondItem="JDk-hB-QPz" secondAttribute="leading" constant="20" id="TGA-eZ-kx0"/>
-                        <constraint firstItem="JSM-Ta-Scc" firstAttribute="trailing" secondItem="hFb-7y-OE0" secondAttribute="trailing" constant="20" id="b8I-Gy-Rqo"/>
-                        <constraint firstItem="hFb-7y-OE0" firstAttribute="leading" secondItem="JSM-Ta-Scc" secondAttribute="leading" constant="20" id="fMP-yx-ge9"/>
-                        <constraint firstItem="5vB-pC-jmz" firstAttribute="top" secondItem="hFb-7y-OE0" secondAttribute="bottom" constant="20" id="jZs-79-i3r"/>
+                        <constraint firstItem="DUt-wo-z8e" firstAttribute="centerY" secondItem="JDk-hB-QPz" secondAttribute="centerY" id="c4Q-Vd-FVU"/>
+                        <constraint firstItem="Mmt-ei-pAm" firstAttribute="centerX" secondItem="JDk-hB-QPz" secondAttribute="centerX" id="hDc-a3-url"/>
+                        <constraint firstItem="Mmt-ei-pAm" firstAttribute="top" secondItem="DUt-wo-z8e" secondAttribute="bottom" constant="50" id="his-q1-IcW"/>
                         <constraint firstAttribute="trailing" secondItem="caQ-vz-yd1" secondAttribute="trailing" constant="20" id="kW8-70-bIx"/>
-                        <constraint firstItem="5vB-pC-jmz" firstAttribute="leading" secondItem="JSM-Ta-Scc" secondAttribute="leading" constant="20" id="qhw-HM-TVI"/>
+                        <constraint firstItem="DUt-wo-z8e" firstAttribute="centerX" secondItem="JDk-hB-QPz" secondAttribute="centerX" id="w69-ac-VuD"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="JSM-Ta-Scc"/>
                 </view>
@@ -102,7 +109,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo" translatesAutoresizingMaskIntoConstraints="NO" id="NQ3-w4-Rm0">
-                            <rect key="frame" x="16" y="10" width="73" height="73"/>
+                            <rect key="frame" x="16" y="10" width="73" height="73.000000000000057"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="73" id="GnR-OJ-Uhy"/>
                                 <constraint firstAttribute="height" constant="73" id="eYn-Mu-8Ef"/>
@@ -156,7 +163,7 @@
                     <viewLayoutGuide key="safeArea" id="lF0-g6-Ct7"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-207" y="123"/>
+            <point key="canvasLocation" x="-207.19999999999999" y="122.78860569715144"/>
         </scene>
         <!--Arts View Controller-->
         <scene sceneID="ioJ-Es-N9H">
@@ -861,10 +868,10 @@
         <image name="desFace" width="281" height="357"/>
         <image name="devFace" width="155" height="153"/>
         <image name="fbIcon" width="40" height="40"/>
-        <image name="hall" width="2481" height="1916"/>
         <image name="kultFace" width="116" height="135"/>
         <image name="leo" width="205" height="196"/>
         <image name="menuIcon" width="30" height="30"/>
+        <image name="noInternetIcon" width="128" height="128"/>
         <image name="sensorama" width="1212" height="306"/>
         <image name="ukf" width="1200" height="918"/>
     </resources>

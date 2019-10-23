@@ -6,6 +6,8 @@ import TorchKit
 import UIKit
 import OnboardKit
 import SwiftEntryKit
+import Network
+
 
 class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   @IBOutlet var sceneView: ARSCNView!
@@ -20,7 +22,10 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     @IBOutlet weak var guideView: UIView!
     @IBOutlet weak var guideOKButton: UIButton!
     
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
+    //Monitor for checking internet connection
+    let monitor = NWPathMonitor()
     
     let onboardingVC = OnboardingViewController.shared
     let popUpContentManager = PopUpContentManager.shared
@@ -45,6 +50,10 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
   override func viewDidLoad() {
     super.viewDidLoad()
     self.sceneView = ARSCNView(frame: self.view.bounds)
+    
+    //Run the monitor to catch connection changes
+    let queue = DispatchQueue(label: "Monitor")
+    monitor.start(queue: queue)
     
     popUpContentManager.loadData()
     print(artObjects.count)
@@ -104,7 +113,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         
         
          //DEBUG SETTING SCENE
-        loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
+        //loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
     }
    
     
@@ -112,6 +121,21 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         let onbVC = onboardingVC.createOnboardingVC()
         onbVC.modalPresentationStyle = .overFullScreen
         onbVC.presentFrom(self, animated: true)
+    }
+    
+    //Catch network changes
+    monitor.pathUpdateHandler = { path in
+        if path.status == .satisfied {
+            print("We're connected!")
+            self.UI() {
+                self.removeNetworkNotification()
+            }
+        } else {
+            print("No connection.")
+            self.UI() {
+                self.presentNetworkNotification()
+            }
+        }
     }
     
     
@@ -398,6 +422,33 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         SwiftEntryKit.display(entry: notificationView, using: attributes)
     }
     
+    func presentNetworkNotification() {
+        self.visualEffectView.isHidden = false
+        self.visualEffectView.isUserInteractionEnabled = true
+        self.view.insertSubview(self.guideView, aboveSubview: self.visualEffectView)
+        self.guideView.center = self.visualEffectView.center
+        self.guideView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        self.guideView.alpha = 0
+    
+        UIView.animate(withDuration: 0.5) {
+            self.guideView.alpha = 1
+            self.guideView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func removeNetworkNotification() {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.guideView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.guideView.alpha = 0
+            self.visualEffectView.isHidden = true
+            self.visualEffectView.isUserInteractionEnabled = false
+        }) { (success) in
+            self.guideView.removeFromSuperview()
+        }
+        
+    }
+    
     
     
     
@@ -415,6 +466,11 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         let menuVC = storyboard?.instantiateViewController(withIdentifier: "menuVC") as! OtherViewController
         present(menuVC, animated: true, completion: nil)
         menuVC.torchProjDelegate = self
+    }
+    
+    //To update UI on the main thread
+    func UI(_ block: @escaping ()->Void) {
+        DispatchQueue.main.async(execute: block)
     }
     
     
