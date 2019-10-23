@@ -89,12 +89,6 @@ extension OtherViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.font = UIFont(name: "NAMU-1960", size: 16.0)
         cell.textLabel?.text = sectionItems[indexPath.row]
         
-        if indexPath.row == 3 || indexPath.row == 4 {
-            cell.isUserInteractionEnabled = false
-            cell.textLabel?.isEnabled = false
-            cell.detailTextLabel?.isEnabled = false
-        }
-        
         return cell
     }
 
@@ -113,8 +107,10 @@ extension OtherViewController: UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: "toArts", sender: self)
         case 3:
             print("church 3D")
+            performSegue(withIdentifier: "toChurch", sender: self)
         case 4:
             print("3d map")
+            performSegue(withIdentifier: "toMap", sender: self)
         case 5:
             print("contacts")
             performSegue(withIdentifier: "toContacts", sender: self)
