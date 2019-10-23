@@ -66,6 +66,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     self.sessionInfoLabel!.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8).isActive = true
     self.sessionInfoLabel!.topAnchor.constraint(equalTo: self.sceneView.topAnchor, constant: 75.0).isActive = true
     self.sessionInfoLabel!.heightAnchor.constraint(equalToConstant: 180.0)
+    self.sessionInfoLabel?.font = UIFont(name: "NAMU-1960", size: 16.0)
     
   }
     
@@ -459,18 +460,18 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
 
   func sessionWasInterrupted(_ session: ARSession) {
     // Inform the user that the session has been interrupted, for example, by presenting an overlay.
-    self.sessionInfoLabel?.text = "Session was interrupted"
+    self.sessionInfoLabel?.text = "AR сессія перервана"
   }
 
   func sessionInterruptionEnded(_ session: ARSession) {
     // Reset tracking and/or remove existing anchors if consistent tracking is required.
-    self.sessionInfoLabel?.text = "Session interruption ended"
+    self.sessionInfoLabel?.text = "AR сессія оновлена"
     // DID SOME SHIT
     //self.resetTracking()
   }
 
   func session(_ session: ARSession, didFailWithError error: Error) {
-    self.sessionInfoLabel?.text = "Session failed: \(error.localizedDescription)"
+    self.sessionInfoLabel?.text = "Сталась помилка: \(error.localizedDescription)"
     guard error is ARError else { return }
 
     let errorWithInfo = error as NSError
@@ -485,8 +486,8 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
 
     DispatchQueue.main.async {
       // Present an alert informing about the error that has occurred.
-      let alertController = UIAlertController(title: "The AR session failed.", message: errorMessage, preferredStyle: .alert)
-      let restartAction = UIAlertAction(title: "Restart Session", style: .default) { _ in
+      let alertController = UIAlertController(title: "Помилка при запуску AR сесії.", message: errorMessage, preferredStyle: .alert)
+      let restartAction = UIAlertAction(title: "Перезапустити", style: .default) { _ in
         alertController.dismiss(animated: true, completion: nil)
         self.resetTracking()
       }
@@ -505,16 +506,16 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
       message = "Найди табличку Початок Експозиции"
 
     case .notAvailable:
-      message = "Tracking unavailable."
+      message = "Трекінг недоступний."
 
     case .limited(.excessiveMotion):
-      message = "Tracking limited - Move the device more slowly."
+      message = "Будь ласка, рухайте пристроєм повільніше."
 
     case .limited(.insufficientFeatures):
-      message = "Tracking limited - Point the device at an area with visible surface detail, or improve lighting conditions."
+      message = "Трекінг обмежений - Наведіть пристрій на ділянку з видимою деталізацією поверхні."
 
     case .limited(.initializing):
-      message = "Initializing AR session."
+      message = "Загрузка AR сесії."
 
     default:
       // No feedback needed when tracking is normal and planes are visible.

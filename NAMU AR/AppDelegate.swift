@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
+        
         do {
             try TorchKit.shared.initSDK(apiKey: "djIucHVibGljLmV5SndjbTkwYnlJNklrTkJSVk5JUjNCTlVURnJlRmRZYkVaT2JXUlRVVlJrUlZGV2FFMVNSM1JRVlZSSmVtUnJWa3ROVkVsaFJFRnFjaTlrY25KQ1VrTkJNRzlITlVGVFNWTkRhRUpDUm1wTWQyMXVlVVZ5U1Vwa1F6WkdZbEpQVjIwaWZjVHVrTXV5cmZHY2VBS21QQVFEajdmdVlYUVhQaFgtTUlpbzR4OWRwV1gtYTlKdHVjaVRJRUZFLW5ORlhnb2JhYzdPVm1vV2Zra0Eyc2d3MlVvTVBBQQ==")
         } catch {
