@@ -50,9 +50,12 @@ extension ArtsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let row = artObjects[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCollectionViewCell
+        cell.isUserInteractionEnabled = false
         
         if let artURL = row.image {
-            cell.artImageView.sd_setImage(with: URL(string: artURL), placeholderImage: UIImage(named: "leo"))
+            cell.artImageView.sd_setImage(with: URL(string: artURL), placeholderImage: UIImage(named: "loadingIcon"), completed: { (image, error, cacheType, imageURL) in
+                cell.isUserInteractionEnabled = true
+            })
         }
         
         return cell
@@ -78,7 +81,6 @@ extension ArtsViewController: UICollectionViewDelegate, UICollectionViewDataSour
        
         vc!.modalPresentationStyle = .fullScreen
         self.present(vc!, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(vc!, animated: true)
     
     }
     

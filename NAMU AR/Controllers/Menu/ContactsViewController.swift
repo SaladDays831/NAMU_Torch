@@ -77,7 +77,7 @@ class ContactsViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     
     @IBAction func instaButtonPressed(_ sender: UIButton) {
-        guard let url = URL(string: "https://www.instagram.com/kurilodanil/") else { return }
+        guard let url = URL(string: "https://www.instagram.com/namu.museum/") else { return }
         UIApplication.shared.open(url)
     }
     

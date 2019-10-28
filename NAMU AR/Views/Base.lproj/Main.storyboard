@@ -56,6 +56,9 @@
                         <viewLayoutGuide key="safeArea" id="a2Y-3r-QWy"/>
                     </view>
                     <connections>
+                        <outlet property="guideBottomLabel" destination="Mmt-ei-pAm" id="33i-HN-ddo"/>
+                        <outlet property="guideImageView" destination="DUt-wo-z8e" id="1Wt-oo-gfc"/>
+                        <outlet property="guideTopLabel" destination="caQ-vz-yd1" id="WIp-fU-04o"/>
                         <outlet property="guideView" destination="JDk-hB-QPz" id="Xgj-wL-bI0"/>
                         <outlet property="menuButton" destination="djS-PC-7tc" id="0dd-wI-qa6"/>
                         <outlet property="notificationText" destination="Bej-JO-eXu" id="U8D-tc-ZBU"/>
@@ -67,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzC-z0-ybF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="JDk-hB-QPz" userLabel="Guide View">
-                    <rect key="frame" x="0.0" y="0.0" width="246" height="309"/>
+                    <rect key="frame" x="0.0" y="0.0" width="246" height="394"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здається, ви офлайн. Для роботи NAMU AR потрібен інтернет." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caQ-vz-yd1">
@@ -77,10 +80,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noInternetIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DUt-wo-z8e">
-                            <rect key="frame" x="59" y="90.5" width="128" height="128"/>
+                            <rect key="frame" x="59" y="133" width="128" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="128" id="vB5-x6-uxx"/>
+                                <constraint firstAttribute="height" constant="128" id="ySn-uc-qA8"/>
+                            </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P.S. У музеї є безкоштовний WiFi!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmt-ei-pAm">
-                            <rect key="frame" x="14.5" y="268.5" width="217.5" height="16"/>
+                            <rect key="frame" x="14.5" y="311" width="217" height="31.5"/>
                             <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -88,6 +95,8 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="DUt-wo-z8e" firstAttribute="leading" secondItem="JSM-Ta-Scc" secondAttribute="leading" constant="59" id="6mk-uD-9Ri"/>
+                        <constraint firstItem="Mmt-ei-pAm" firstAttribute="leading" secondItem="JSM-Ta-Scc" secondAttribute="leading" constant="14.5" id="GYS-tZ-mDb"/>
                         <constraint firstItem="caQ-vz-yd1" firstAttribute="top" secondItem="JDk-hB-QPz" secondAttribute="top" constant="20" id="Kt3-KF-YUd"/>
                         <constraint firstItem="caQ-vz-yd1" firstAttribute="leading" secondItem="JDk-hB-QPz" secondAttribute="leading" constant="20" id="TGA-eZ-kx0"/>
                         <constraint firstItem="DUt-wo-z8e" firstAttribute="centerY" secondItem="JDk-hB-QPz" secondAttribute="centerY" id="c4Q-Vd-FVU"/>
@@ -108,7 +117,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo" translatesAutoresizingMaskIntoConstraints="NO" id="NQ3-w4-Rm0">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NQ3-w4-Rm0">
                             <rect key="frame" x="16" y="10" width="73" height="73"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="73" id="GnR-OJ-Uhy"/>
@@ -205,7 +214,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список картин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrO-vg-N4V">
-                                <rect key="frame" x="97.5" y="24" width="180" height="29"/>
+                                <rect key="frame" x="98" y="24" width="179.5" height="29"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -251,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контакти" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxk-bC-xJo">
-                                <rect key="frame" x="135" y="24" width="105" height="28"/>
+                                <rect key="frame" x="132" y="24" width="111" height="29"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -270,13 +279,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адреса:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-6C-G5E">
-                                <rect key="frame" x="40" y="85" width="60" height="19"/>
+                                <rect key="frame" x="40" y="85" width="64.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4P7-3S-AeH">
-                                <rect key="frame" x="40" y="104" width="277" height="31"/>
+                                <rect key="frame" x="40" y="104.5" width="283" height="32"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                 <state key="normal" title="вул. М. Грушевського, 6; Київ, 01001">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -286,16 +295,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="тел." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2q-1b-gw1">
-                                <rect key="frame" x="40" y="167" width="29.5" height="19"/>
+                                <rect key="frame" x="40" y="168.5" width="30" height="19.5"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-m7-xxw">
-                                <rect key="frame" x="77.5" y="145.5" width="146" height="62"/>
+                                <rect key="frame" x="78" y="146.5" width="164" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-yI-WLS">
-                                        <rect key="frame" x="0.0" y="0.0" width="146" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
                                         <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                         <state key="normal" title="+38 (044) 278-13-57">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -305,7 +314,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xd-Zn-SVE">
-                                        <rect key="frame" x="0.0" y="31" width="146" height="31"/>
+                                        <rect key="frame" x="0.0" y="32" width="164" height="32"/>
                                         <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                         <state key="normal" title="+38 (044) 278-74-54">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -317,13 +326,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neU-6V-71E">
-                                <rect key="frame" x="40" y="223.5" width="49" height="19"/>
+                                <rect key="frame" x="40" y="226.5" width="54" height="19.5"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSe-lG-xdy">
-                                <rect key="frame" x="97" y="217.5" width="133" height="31"/>
+                                <rect key="frame" x="102" y="220" width="147" height="32"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                 <state key="normal" title="info@namu.kiev.ua">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -333,25 +342,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Графік роботи:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it0-mg-b2N">
-                                <rect key="frame" x="40" y="280.5" width="114.5" height="19"/>
+                                <rect key="frame" x="40" y="284" width="117" height="19.5"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 — 18:00 - середа, четвер, неділя 12:00 — 20:00 - п’ятниця 11:00 — 19:00 - субота Вихідні: понеділок, вівторок." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBV-O3-TtU">
-                                <rect key="frame" x="40" y="307.5" width="290.5" height="75"/>
+                                <rect key="frame" x="40" y="311.5" width="304" height="77"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Каса зачиняється за 1 годину до закриття музею" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dS2-9I-8V3">
-                                <rect key="frame" x="25" y="390.5" width="325.5" height="16.5"/>
+                                <rect key="frame" x="17" y="396.5" width="341" height="17"/>
                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qkr-lA-ehI">
-                                <rect key="frame" x="103.5" y="447" width="168" height="40"/>
+                                <rect key="frame" x="103.5" y="453.5" width="168" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTg-OV-jiF" userLabel="fbButton">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -369,8 +378,11 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McT-w4-GQm" userLabel="webButton">
                                         <rect key="frame" x="128" y="0.0" width="40" height="40"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="fbIcon"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fdW-aH-nAv"/>
+                                            <constraint firstAttribute="width" constant="40" id="hR3-xs-UNj"/>
+                                        </constraints>
+                                        <state key="normal" image="webIcon"/>
                                         <connections>
                                             <action selector="websiteButtonPressed:" destination="fGg-Wj-PBr" eventType="touchUpInside" id="Cnr-rY-KiG"/>
                                         </connections>
@@ -643,8 +655,8 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coh-8F-JbF">
                                                 <rect key="frame" x="32" y="469" width="311" height="285"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <mutableString key="text">  Церква Воздвиження - яскравий приклад української дерев’яної архітектури доби зрілого бароко. Була споруджена на місці старої церкви у 1759(61) році на замовлення громади чернігівської губернії. 
-  До нашого часу дійшли небагато церков такого типу через антирелігійну політику радянського союзу. Церква, що перед вами, була розібрана у 30-х роках 20 ст. Перед самим її знесенням дослідники зробили детальні заміри, замальовки та фото, щоб зберегти інформацію для майбутніх поколінь. Саме завдяки цим даним була створена 3д-модель, зображення якої представлені нижче.</mutableString>
+                                                <string key="text">  Церква Воздвиження - яскравий приклад української дерев’яної архітектури доби зрілого бароко. Була споруджена на місці старої церкви у 1759(61) році на замовлення громади чернігівської губернії. 
+  До нашого часу дійшли небагато церков такого типу через антирелігійну політику радянського союзу. Церква, що перед вами, була розібрана у 30-х роках 20 ст. Перед самим її знесенням дослідники зробили детальні заміри, замальовки та фото, щоб зберегти інформацію для майбутніх поколінь. Саме завдяки цим даним була створена 3д-модель, зображення якої представлені нижче.</string>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -674,7 +686,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Автор 3D-моделі: Руслан Лукащук" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlp-k0-AZL">
-                                                <rect key="frame" x="66.5" y="2642" width="242" height="17"/>
+                                                <rect key="frame" x="67" y="2642" width="241.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="NAMU-1960" family="NAMU" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -738,7 +750,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9v-aE-woX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783.20000000000005" y="2251.5742128935535"/>
+            <point key="canvasLocation" x="-791" y="2486"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="vG2-43-Yco">
@@ -992,12 +1004,13 @@
         <image name="fbIcon" width="40" height="40"/>
         <image name="instaIcon" width="40" height="40"/>
         <image name="kultFace" width="116" height="135"/>
-        <image name="leo" width="205" height="196"/>
+        <image name="loadingIcon" width="980" height="980"/>
         <image name="map3D" width="732" height="450"/>
         <image name="mapTop" width="732" height="820"/>
         <image name="menuIcon" width="30" height="30"/>
         <image name="noInternetIcon" width="128" height="128"/>
         <image name="sensorama" width="1212" height="306"/>
         <image name="ukf" width="1200" height="918"/>
+        <image name="webIcon" width="30" height="30"/>
     </resources>
 </document>

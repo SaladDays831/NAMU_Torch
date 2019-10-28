@@ -20,7 +20,7 @@ class OtherViewController: UIViewController {
     
     let onboardingVC = OnboardingViewController.shared
     
-    let sectionItems = ["Розпочати AR екскурсію з початку", "Як користуватися додатком", "Список картин", "3D модель церкви Вознесіння", "3D мапа музею", "Контакти", "Залишити фідбек", "Про додаток"]
+    let sectionItems = ["Розпочати AR екскурсію з початку", "Як користуватися додатком", "Список картин", "Модель церкви Вознесіння", "Мапа музею", "Контакти", "Залишити фідбек", "Про додаток"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

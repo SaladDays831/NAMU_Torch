@@ -20,7 +20,9 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     @IBOutlet weak var notificationText: UILabel!
     
     @IBOutlet weak var guideView: UIView!
-    @IBOutlet weak var guideOKButton: UIButton!
+    @IBOutlet weak var guideTopLabel: UILabel!
+    @IBOutlet weak var guideBottomLabel: UILabel!
+    @IBOutlet weak var guideImageView: UIImageView!
     
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
@@ -31,7 +33,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     let popUpContentManager = PopUpContentManager.shared
     
  //MARK: Project URL
-  var projectURL = Bundle.main.url(forResource: "NAMU-10", withExtension: "torchkitproj")!
+  var projectURL = Bundle.main.url(forResource: "NAMU-14", withExtension: "torchkitproj")!
     var projectIsLoaded = false
     var loadedProject: TorchProjectNode?
 
@@ -113,7 +115,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         
         
          //DEBUG SETTING SCENE
-        //loadedProject?.setScene(sceneName: "to church", resetCurrentScene: true)
+        loadedProject?.setScene(sceneName: "to drunk", resetCurrentScene: true)
     }
    
     
@@ -204,7 +206,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         case "ded3tapped":
             self.popUpDescription.text = artObjects[3].trigger3description
             self.presentPopUp(fromBottom: true)
-        case "dedNexttapped":
+        case "dedNextTapped":
             self.popUpDescription.text = artObjects[3].nextconnection
             self.presentPopUp(fromBottom: false)
             
@@ -289,11 +291,34 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
             self.presentNotification()
             
         case "church1tapped":
-            self.popUpDescription.text = "Чувак, эта вечеринка отстой"
+            self.popUpDescription.text = "Церква Воздвиження - яскравий приклад української дерев’яної архітектури доби зрілого бароко. Була споруджена на місці старої церкви у 1759(61) році на замовлення громади чернігівської губернії. До нашого часу дійшли небагато церков такого типу через антирелігійну політику радянського союзу. Церква, що перед вами, була розібрана у 30-х роках 20 ст. Перед самим її знесенням дослідники зробили детальні заміри, замальовки та фото, щоб зберегти інформацію для майбутніх поколінь. Саме завдяки цим даним була створена 3д-модель."
             self.presentPopUp(fromBottom: true)
         case "church2tapped":
-            self.popUpDescription.text = "Я, бля, ненавижу этих людей"
+            self.popUpDescription.text = "Іконостас - це, буквально, стіна ікон, що відокремлює сакральну(вівтарну) частину церкви від прихожан. З 16-го ст. виникає класичний високий іконостас, який складався з 5-ти основних рядів або чинів (знизу вгору): Цокольний, де переважно зображували біблейські сцени Старого Заповіту. Намісний - парні ікони Ісуса Христа та Богоматері, а також святих, які пов’язані із  церквою. Празниковий, присвячений церковним святам Деісусний - головний чин іконостасу, на якому зображено Спасителя, Богоматір, Івана Предтечу та ряд апостолів. Та пророчий ряд. Ікони були збережені завдяки Жольлвському, який вивіз їх з храму до його зруйнування."
             self.presentPopUp(fromBottom: true)
+        case "churchNextTapped":
+            self.popUpDescription.text = "Окрім релігійного мистецтва у період бароко активно починає розвиватись і мистецтво світське."
+            self.presentPopUp(fromBottom: false)
+            
+            
+        case "fondsTapped":
+            self.guideImageView.image = UIImage(named: "thanksGuy")
+            self.guideTopLabel.text = "Сподіваємось, було цікаво :)"
+            self.guideBottomLabel.text = "Ми старались, аби додаток був цікавим для вас. Але ви можете зробити його ще кращим ;) Для цього потрібно залишити свій відгук!"
+            self.guideBottomLabel.font = UIFont(name: "NAMU-1960", size: 11.0)
+            self.view.insertSubview(self.guideView, aboveSubview: self.sceneView)
+            self.guideView.center = self.view.center
+            self.guideView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.guideView.alpha = 0
+                UIView.animate(withDuration: 0.5) {
+                    self.guideView.alpha = 1
+                    self.guideView.transform = CGAffineTransform.identity
+                }
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleThanksTap(_:)))
+            self.guideView.addGestureRecognizer(tap)
+            self.guideView.isUserInteractionEnabled = true
+
             
         default:
             break
@@ -447,6 +472,11 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
             self.guideView.removeFromSuperview()
         }
         
+    }
+    
+    @objc func handleThanksTap(_ sender: UITapGestureRecognizer) {
+       print("Hello World")
+        guideView.removeFromSuperview()
     }
     
     

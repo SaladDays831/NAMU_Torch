@@ -16,7 +16,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
       super.prepareForReuse()
       self.artImageView.sd_cancelCurrentImageLoad()
-      self.artImageView.image = UIImage(named: "leo") // set to default/placeholder image
+      self.artImageView.image = UIImage(named: "loadingIcon") // set to default/placeholder image
     }
     
     
