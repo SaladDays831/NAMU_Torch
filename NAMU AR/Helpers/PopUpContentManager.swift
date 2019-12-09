@@ -21,7 +21,7 @@ class PopUpContentManager {
     func loadData() {
         
         guard let url = URL(string: "http://gsx2json.com/api?id=1f7j3WPBouLWuIhySO2p2bFF13RlR76BxvLSNFUT9Ods&columns=false") else {
-            print("RETURNED HERE?????")
+            print("RETURNED")
             return }
         //http://gsx2json.com/api?id=11tvOkkWUcaYtmk5nVNOzMNx4v19VnhYuIqjC60zVrSw&sheet=1&columns=false
         URLSession.shared.dataTask(with: url) { (data, response

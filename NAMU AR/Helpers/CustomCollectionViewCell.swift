@@ -19,12 +19,4 @@ class CustomCollectionViewCell: UICollectionViewCell {
       self.artImageView.image = UIImage(named: "loadingIcon") // set to default/placeholder image
     }
     
-    
-    /*
-    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes)
-        -> UICollectionViewLayoutAttributes {
-      return layoutAttributes
-    }
- 
- */
 }

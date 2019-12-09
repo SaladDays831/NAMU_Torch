@@ -55,8 +55,7 @@ class ContactsViewController: UIViewController, MFMailComposeViewControllerDeleg
                 let mail = MFMailComposeViewController()
                 mail.mailComposeDelegate = self
                 mail.setToRecipients(["info@namu.kiev.ua"])
-                //mail.setSubject("Poof feedback")
-                
+    
                 self.present(mail, animated: true)
             }))
             

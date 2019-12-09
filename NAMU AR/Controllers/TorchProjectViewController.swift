@@ -117,7 +117,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         
         
          //DEBUG SETTING SCENE
-        loadedProject?.setScene(sceneName: "to drunk", resetCurrentScene: true)
+        //loadedProject?.setScene(sceneName: "to drunk", resetCurrentScene: true)
     }
    
     
@@ -333,12 +333,6 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     
   }
 
-    //MARK: ViewDidDisappear
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    // DID SOME SHIT
-    //self.sceneView.session.pause()
-  }
     //MARK: ViewDidLayoutSubviews
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
@@ -386,14 +380,11 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     worldPlaneMaterial.colorBufferWriteMask = []
     worldPlaneGeometry.materials = [worldPlaneMaterial]
     worldPlaneNode.castsShadow = false
-    //comment next line
-    //self.sceneView.scene.rootNode.addChildNode(worldPlaneNode)
     let light = SCNLight()
     light.type = .directional
     light.shadowMode = .deferred
     light.intensity = 1000.0
     light.color = UIColor(white: 1.0, alpha: 1.0)
-    //comment next line
     light.castsShadow = true
     light.shadowColor = UIColor.black.withAlphaComponent(0.5)
     light.shadowBias = 32

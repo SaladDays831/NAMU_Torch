@@ -35,11 +35,9 @@ class ArtDetailViewController: UIViewController {
     func setImage() {
         artImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "loadingIcon"), completed: { (image, error, cacheType, imageURL) in
             let downImage = image as! UIImage
-            //self.artImageHeight.constant = downImage.size.height
             let ratio = downImage.size.width / downImage.size.height
             let newHeight = self.artImageView.frame.width / ratio
             self.artHeightConstraint.constant = newHeight
-            //self.artImageView.layoutIfNeeded()
             self.view.layoutIfNeeded()
         })
         

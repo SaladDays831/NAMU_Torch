@@ -41,10 +41,6 @@ class OtherViewController: UIViewController {
         tableView.rowHeight = 80
     }
     
-
- 
-    
-    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -116,6 +112,9 @@ extension OtherViewController: UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: "toContacts", sender: self)
         case 6:
             print("feedback")
+            if let url = URL(string: "https://docs.google.com/forms/d/e/1FAIpQLScrBFJ05vnEXgR2kzKCNpolT8kEP7FIRTpukb-mj4z7Uoxpmw/viewform?usp=sf_link") {
+                UIApplication.shared.open(url)
+            }
         case 7:
             print("About")
             performSegue(withIdentifier: "toAbout", sender: self)
