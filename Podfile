@@ -7,7 +7,10 @@ target 'NAMU AR' do
 
   # Pods for NAMU_Torch
 
-pod 'TorchKit', :http => "https://artifacts.torch.dev/torchkit/TorchKit_0_3_1.zip"
+pod 'TorchKit', :http => "https://artifacts.torch.dev/torchkit/TorchKit_0_3_2.zip"
+
+
+
 pod 'OnboardKit'
 pod 'SwiftEntryKit', '1.1.3'
 pod 'SDWebImage'

@@ -23,6 +23,7 @@ class PopUpContentManager {
         guard let url = URL(string: "http://gsx2json.com/api?id=1f7j3WPBouLWuIhySO2p2bFF13RlR76BxvLSNFUT9Ods&columns=false") else {
             print("RETURNED HERE?????")
             return }
+        //http://gsx2json.com/api?id=11tvOkkWUcaYtmk5nVNOzMNx4v19VnhYuIqjC60zVrSw&sheet=1&columns=false
         URLSession.shared.dataTask(with: url) { (data, response
                  , error) in
                  guard let data = data else {
@@ -32,22 +33,14 @@ class PopUpContentManager {
                  do {
                      let decoder = JSONDecoder()
                     let rows = try decoder.decode(RootClass.self, from: data)
-                    //artObjects = try decoder.decode([ArtObject].self, from: data)
                     guard let JSONArt = rows.rows else { return }
                     artObjects = JSONArt
                     print("artObjects has \(artObjects.count) items")
-                    //print("\(artObjects[0].trigger1Description)")
                  } catch let error {
                      print("Error: ", error)
               }
         }.resume()
         
     }
-    
-    
-
-    
-    
-    
     
 }

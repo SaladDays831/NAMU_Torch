@@ -10,6 +10,8 @@ import Network
 
 
 class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
+    
+    
   @IBOutlet var sceneView: ARSCNView!
   @IBOutlet var sessionInfoLabel: UILabel?
     @IBOutlet weak var menuButton: UIButton!
@@ -61,6 +63,7 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
     print(artObjects.count)
     
     //ADD SCENEVIEW BELOW BUTTON
+    
     self.view.insertSubview(self.sceneView, belowSubview: menuButton)
     
     self.sessionInfoLabel = UILabel(frame: CGRect(x: 0, y: 75, width: self.view.bounds.width * 0.8, height: 100))
@@ -93,7 +96,6 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         self.sceneView.session.run(configuration)
         self.sceneView.session.delegate = self
         UIApplication.shared.isIdleTimerDisabled = true
-        //self.sceneView.showsStatistics = true
 
         //MARK: TorchProject loading
         do {
@@ -424,7 +426,6 @@ class TorchProjectViewController: UIViewController, ARSCNViewDelegate, ARSession
         
         if !fromBottom {
             attributes.position = .top
-            //attributes.entryBackground = .color(color: .init(light: UIColor(named: "nextPopUp")!, dark: UIColor(named: "nextPopUp")!))
         }
         
         SwiftEntryKit.display(entry: popUpView, using: attributes)
